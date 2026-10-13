@@ -1,0 +1,46 @@
+source_record_id	business_name	address	city	state	country	phone	email	website
+S3_0001	Atlantic Aero Solutions (Global)	333 Broadway, # 880	Los Angeles	CA	USA	+13109064033	hello@atlanticaero.com	www.atlanticaero.com
+S3_0002	Royal Smart Services	293 High St, # 878	London	England	UK	910209801946	sales@royalsmart.com	www.royalsmart.com
+S3_0003	Vortex Agri Solutions	313 Innovation Blvd.	Los Angeles	CA	USA	13105091231	support@vortexagri.com	www.vortexagri.com
+S3_0004	Acro Network Ent.	56 Market St, # 814	Dallas	TX	USA	+12143299042	sales@acronetwork.com	www.acronetwork.com
+S3_0005	Prime Data Industries	490 Fifth Ave.	Atlanta	GA	USA	+14043881841	sales@primedata.com	www.primedata.com
+S3_0006	Atlantic Robotics Solutions	420 Fifth Ave.	Austin	TX	USA	15128441878	hello@atlanticrobotics.com	www.atlanticrobotics.com
+S3_0007	Summit Micro Innovations	981 Industrial Ave.	Toronto	ON	Canada	914165163953	hello@summitmicro.com	www.summitmicro.com
+S3_0008	Prime Network Innovations	630 Brigade Rd, # 331	Chennai	Tamil Nadu	India	910449767312	office@primenetwork.com	www.primenetwork.com
+S3_0009	Alpha Media Partners (Global)	314 Cyber City # 539	Pune	Maharashtra	India	910206123430		www.alphamedia.com
+S3_0010	Zenith Logistics Technologies	993 High St	Sydney	NSW	Australia	+91024486102	sales@zenithlogistics.com	www.zenithlogistics.com
+S3_0011	Falcon Smart Hooldings	170 Innovation Blvd.	Austin	TX	USA		support@falconsmart.com	www.falconsmart.com
+S3_0012	Global Capital Ventures	491 Industrial Ave.	Sydney	NSW	Australia	91025833597	support@globalcapital.com	
+S3_0013	Acr Agri Services	82 Silicon Expressway	Pune	Maharashtra	India	910205438490	office@acroagri.com	www.acroagri.com
+S3_0014	Spectra Energy Industries (Global)	445 Broadway, # 763	Los Angeles	CA	USA	+13103525352		www.spectraenergy.com
+S3_0015	Optima Micro Solutions	179 Victoria Rd	New York	NY	USA	12129665728		www.optimamicro.com
+S3_0016	Terra Eco Ventures	726 Mission St # 612	Atlanta	GA	USA	+14047529090	support@terraeco.com	www.terraeco.com
+S3_0017	Terra Bio Industries	920 Mission St, # 718	New York	NY	USA	+12124561423		www.terrabio.com
+S3_0018	United Aero Group	611 Market St, # 788	Toronto	ON	Canada	914165521644	office@unitedaero.com	www.unitedaero.com
+S3_0019	Zenith Digital Innovations	491 MG Rd, # 384	Chicago	IL	USA	+13123858141		
+S3_0020	Falcon Robotics Solutions	366 Mission St	London	England	UK	+910202754894	office@falconrobotics.com	www.falconrobotics.com
+S3_0021	BluePeak Nano Systems	720 Fifth Ave.	Chennai	Tamil Nadu	India	+910447718473	office@bluepeaknano.com	www.bluepeaknano.com
+S3_0022	Optima  Industrial  Laboratories	475 Broadway	New York	NY	USA	+12125312899	office@optimaindustrial.com	www.optimaindustrial.com
+S3_0023	Hyper Fin Dynamics	854 Market St # 655	Manchester	England	UK		office@hyperfin.com	www.hyperfin.com
+S3_0024	Omega Digital Corp.	380 Brigade Rd, # 740	Manchester	England	UK	9101618416216	support@omegadigital.com	www.omegadigital.com
+S3_0025	Hyper Digital Corp.	572 Tech Parkway # 548	Dallas	TX	USA	+12149158941	office@hyperdigital.com	www.hyperdigital.com
+S3_0026	Prime Data Group	828 Innovation Blvd. # 418	Sydney	NSW	Australia	91021229419	hello@primedata.com	www.primedata.com
+S3_0027	Core  Capital  Solutions	871 Financial Center Way	Denver	CO	USA	+13033203522	hello@corecapital.com	www.corecapital.com
+S3_0028	Nova Security Holdings	732 Industrial Ave.	Manchester	England	UK	+9101619094999	sales@novasecurity.com	www.novasecurity.com
+S3_0029	Novaa Aero Ventures	158 Mission St	Berlin	Berlin	Germany	+910309526867	support@novaaero.com	www.novaaero.com
+S3_0030	Synnapse Micro Dynamics	292 Victoria Rd # 524	Austin	TX	USA	+15125489318		www.synapsemicro.com
+S3_0031	Atlantic Data Holdings	867 Brigade Rd, # 775	Atlanta	GA	USA	+14047013434	hello@atlanticdata.com	www.atlanticdata.com
+S3_0032	Terra Network Ventures	350 MG Rd # 486	Mumbai	Maharashtra	India	910228639414	hello@terranetwork.com	www.terranetwork.com
+S3_0033	IronClad Supply Dynamics	724 Innovation Blvd., # 339	Los Angeles	CA	USA	+13109947730	sales@ironcladsupply.com	www.ironcladsupply.com
+S3_0034	National uSpply Services	732 Financial Center Way # 495	London	England	UK	+910203551903	hello@nationalsupply.com	www.nationalsupply.com
+S3_0035	Nova Digital Enterprises		Manchester	England	UK	9101612683838	hello@novadigital.com	www.novadigital.com
+S3_0036	BlueePeak Media Solutions	942 Fifth Ave.	Manchester	England	UK	+9101613418526	sales@bluepeakmedia.com	www.bluepeakmedia.com
+S3_0037	Omega Energy Enterprises (Global)	490 Victoria Rd # 446	Austin	TX	USA	+15128387512	support@omegaenergy.com	www.omegaenergy.com
+S3_0038	Falcon Bio Dynamics	882 Silicon Expressway # 489	Bengaluru	Karnataka	India	+910806312692	office@falconbio.com	www.falconbio.com
+S3_0039	Falcon Secrity Partners		London	England	UK	+910202147909	sales@falconsecurity.com	
+S3_0040	Pacific Energy Group	242 High St	Atlanta	GA	USA	14043002646	hello@pacificenergy.com	www.pacificenergy.com
+S3_0042	Allied Health Consulting (Global)		Boston	MA	USA	16178983950	support@alliedhealth.com	www.alliedhealth.com
+S3_0044	IronClad Pharma Ent.	482 Silicon Expressway	Denver	CO	USA	13034611153	hello@ironcladpharma.com	
+S3_0045	GreenLeaf Media Partners	703 MG Rd	Atlanta	GA	USA	+14046526661	hello@greenleafmedia.com	www.greenleafmedia.com
+S3_0046	Zenith  Agri  Group	716 Industrial Ave.	Chennai	Tamil Nadu	India	910446068760	support@zenithagri.com	www.zenithagri.com
+S3_0047	Royal Fin Dynamics	119 Innovation Blvd.	London	England	UK	910207022335	office@royalfin.com	

@@ -1,0 +1,105 @@
+source_record_id	business_name	address	city	state	country	phone	email	website
+S1_0001	Apex Technology Solutions Private Limited	664 Broadway	San Francisco	CA	USA	+1 (415) 481-5012	contact@apextech.com	https://www.apextech.com
+S1_0002	Beacon Financial Advisory	238 Tech Parkway, Ste. 792	New York	NY	USA	+1 (212) 958-9935	contact@beaconfa.com	https://www.beaconfa.com
+S1_0003	Cascade Global Logistics	99 Brigade Rd, Ste. 130	Seattle	WA	USA	+1 (206) 295-4582	contact@cascadelogistics.com	https://www.cascadelogistics.com
+S1_0004	Delta Health Pharmaceuticals Pvt. Ltd.	248 MG Rd, Ste. 674	Boston	MA	USA	+1 (617) 403-9928	contact@deltahealth.com	
+S1_0005	Evergreen Renewable Energy LLC		Denver	CO	USA	+1 (303) 206-3615	contact@evergreenenergy.org	https://www.evergreenenergy.org
+S1_0006	Frontier Robotics & Automation Pvt. Ltd.		Austin	TX	USA	+1 (512) 359-4527	contact@frontierrobotics.io	https://www.frontierrobotics.io
+S1_0007	Golden Gate Retail Enterprises Private Limited	990 Victoria Rd	San Francisco	CA	USA			https://www.goldengateretail.com
+S1_0008	Horizon Aerospace Engineering Pvt. Ltd.	109 Main St, Ste. 718	Los Angeles	CA	USA	+1 (310) 470-1711	contact@horizonaero.com	https://www.horizonaero.com
+S1_0009	Infinity Cloud Networks	757 Fifth Ave., Ste. 487	Chicago	IL	USA	+1 (312) 280-5803	contact@infinitycloud.net	https://www.infinitycloud.net
+S1_0010	Jupiter BioSciences Lab Private Limited	859 Silicon Expressway, Ste. 470	San Diego	CA	USA	+1 (858) 791-4150	contact@jupiterbiosci.com	https://www.jupiterbiosci.com
+S1_0011	KEYSTONE CONSTRUCTION GROUP	731 Broadway	Philadelphia	PA	USA	+1 (215) 433-5741	contact@keystonebuild.com	https://www.keystonebuild.com
+S1_0012	Lumina Creative Media LLC		Atlanta	GA	USA	+1 (404) 303-7227	contact@luminamedia.agency	https://www.luminamedia.agency
+S1_0013	Matrix Cyber Defense	294 Fifth Ave., Ste. 473	Washington	DC	USA	+1 (202) 366-7065		
+S1_0014	Nexus Semiconductor Works	373 Innovation Blvd., Ste. 818	San Jose	CA	USA	+1 (408) 899-2169	contact@nexussemi.com	https://www.nexussemi.com
+S1_0015	Orion Asset Management Pvt. Ltd.	633 Silicon Expressway	Charlotte	NC	USA	+1 (704) 946-5010		https://www.orionasset.com
+S1_0016	PINNACLE FOOD BRANDS	177 Fifth Ave.	Portland	OR	USA	+1 (503) 855-4598	contact@pinnaclefood.com	https://www.pinnaclefood.com
+S1_0017	Quantum Materials Research	711 Main St, Ste. 894	Raleigh	NC	USA	+1 (919) 257-4752	contact@quantummat.org	https://www.quantummat.org
+S1_0018	Radiant Solar Systems Private Limited	851 Market St, Ste. 510	Phoenix	AZ	USA	+1 (602) 474-2084		https://www.radiantsolar.com
+S1_0019	Silverline Maritime Transport	226 Financial Center Way, Ste. 835	Miami	FL	USA	+1 (305) 522-4483	contact@silverlineshipping.com	https://www.silverlineshipping.com
+S1_0020	Trident Automotive Components	681 Fifth Ave.	Detroit	MI	USA		contact@tridentauto.com	https://www.tridentauto.com
+S1_0021	UltraTech Software Innovations Private Limited	156 Industrial Ave.	Bengaluru	Karnataka	India	+91 0805 408072	contact@ultratechsoft.in	https://www.ultratechsoft.in
+S1_0022	Bharat Heavy Electrical Systems Inc.	774 Brigade Rd, Ste. 697	New Delhi	Delhi	India	+91 0114 679591	contact@bharatelectricals.co.in	https://www.bharatelectricals.co.in
+S1_0023	Tata Precision Engineering Pvt. Ltd.	151 MG Rd, Ste. 873	Pune	Maharashtra	India	+91 0203 564251	contact@tataprecision.com	https://www.tataprecision.com
+S1_0024	INFOSPECTRUM DIGITAL LABS	652 Tech Parkway, Ste. 532	Hyderabad	Telangana	India	+91 0407 455324	contact@infospectrum.co	https://www.infospectrum.co
+S1_0025	Mahindra Agri Logistics Private Limited	400 Brigade Rd, Ste. 641	Mumbai	Maharashtra	India	+91 0222 921859	contact@mahindra-agri.in	https://www.mahindra-agri.in
+S1_0026	Chennai Petrochemical Refining LLC	708 Financial Center Way, Ste. 373	Chennai	Tamil Nadu	India	+91 0442 871534	contact@chennaipetrochem.com	https://www.chennaipetrochem.com
+S1_0027	VANGUARD SECURITY SOLUTIONS	310 Mission St	London	England	UK	+44 0209 398441		https://www.vanguardsecurity.co.uk
+S1_0028	Crown FinTech Global		London	England	UK	+44 0209 517169	contact@crownfintech.com	https://www.crownfintech.com
+S1_0029	Bavaria Precision Motors	633 Innovation Blvd.	Munich	Bavaria	Germany	+44 0899 897858	contact@bavariamotors.de	https://www.bavariamotors.de
+S1_0030	Nordic Clean Energy Labs	950 Market St, Ste. 600	Stockholm	Stockholm	Sweden	+44 0870 89806	contact@nordiccleanenergy.se	https://www.nordiccleanenergy.se
+S1_0031	GreenLeaf Agri Corporation Inc.	256 Financial Center Way, Ste. 180	New York	NY	USA	+1 (212) 287-8962	contact@greenleafagri.com	https://www.greenleafagri.com
+S1_0032	Optima Bio Innovations	794 Tech Parkway	Berlin	Berlin	Germany	+91 0308 973915	contact@optimabio.com	https://www.optimabio.com
+S1_0033	Core Nano Holdings	903 Brigade Rd	Manchester	England	UK	+91 0161 4553384		https://www.corenano.com
+S1_0034	IronClad Network Innovations Private Limited	740 Industrial Ave.	Los Angeles	CA	USA	+1 (310) 887-7118	contact@ironcladnetwork.com	https://www.ironcladnetwork.com
+S1_0035	Terra Analytics Ventures Private Limited	263 Innovation Blvd.	Seattle	WA	USA	+1 (206) 221-4770	contact@terraanalytics.com	https://www.terraanalytics.com
+S1_0036	Zenith Aero Technologies Private Limited		Austin	TX	USA	+1 (512) 269-1514	contact@zenithaero.com	https://www.zenithaero.com
+S1_0037	BluePeak Supply Solutions Inc.	253 Industrial Ave., Ste. 319	Manchester	England	UK	+91 0161 3219824		https://www.bluepeaksupply.com
+S1_0038	Synapse Pharma Industries Private Limited	258 Victoria Rd	London	England	UK	+91 0207 829332	contact@synapsepharma.com	https://www.synapsepharma.com
+S1_0039	Royal Eco Solutions Pvt. Ltd.	372 Mission St	Chennai	Tamil Nadu	India	+91 0441 908841	contact@royaleco.com	https://www.royaleco.com
+S1_0040	Eagle Energy Group	72 Mission St, Ste. 211	Seattle	WA	USA	+1 (206) 454-4139	contact@eagleenergy.com	https://www.eagleenergy.com
+S1_0041	Royal Network Ventures Inc.	442 Tech Parkway	Boston	MA	USA	+1 (617) 455-2235	contact@royalnetwork.com	https://www.royalnetwork.com
+S1_0042	Terra Network Solutions Pvt. Ltd.	677 MG Rd, Ste. 195	New York	NY	USA	+1 (212) 971-4872	contact@terranetwork.com	https://www.terranetwork.com
+S1_0043	FIRST CAPITAL VENTURES	228 Cyber City	London	England	UK	+91 0201 983738	contact@firstcapital.com	https://www.firstcapital.com
+S1_0044	First Fin Technologies LLC	281 Financial Center Way, Ste. 565	Hyderabad	Telangana	India	+91 0405 785687	contact@firstfin.com	https://www.firstfin.com
+S1_0045	Omega Security Services Corporation	687 High St	Berlin	Berlin	Germany	+91 0304 185957	contact@omegasecurity.com	https://www.omegasecurity.com
+S1_0046	Metro Smart Technologies	763 MG Rd	Toronto	ON	Canada	+91 4166 261415		https://www.metrosmart.com
+S1_0047	National Digital Industries Corporation	524 Financial Center Way, Ste. 261	London	England	UK	+91 0201 954280	contact@nationaldigital.com	https://www.nationaldigital.com
+S1_0048	STARLIGHT BIO DYNAMICS	80 Brigade Rd	Chicago	IL	USA	+1 (312) 440-7615	contact@starlightbio.com	https://www.starlightbio.com
+S1_0049	Prime Pharma Corporation Corporation	618 Market St, Ste. 529	Toronto	ON	Canada		contact@primepharma.com	https://www.primepharma.com
+S1_0050	Direct Chem Corporation Pvt. Ltd.	254 Industrial Ave.	Bengaluru	Karnataka	India		contact@directchem.com	https://www.directchem.com
+S1_0051	Terra Supply Partners Pvt. Ltd.	19 Fifth Ave., Ste. 676	Austin	TX	USA	+1 (512) 302-2200	contact@terrasupply.com	https://www.terrasupply.com
+S1_0052	Core Smart Laboratories	145 Financial Center Way	Dallas	TX	USA	+1 (214) 270-5002	contact@coresmart.com	https://www.coresmart.com
+S1_0053	Allied Agri Enterprises LLC	863 MG Rd, Ste. 726	Pune	Maharashtra	India	+91 0209 874152	contact@alliedagri.com	
+S1_0054	Global Infra Dynamics Inc.	316 Financial Center Way, Ste. 237	Berlin	Berlin	Germany	+91 0305 437001	contact@globalinfra.com	https://www.globalinfra.com
+S1_0055	Prime Eco Services Pvt. Ltd.	169 Industrial Ave.	Berlin	Berlin	Germany	+91 0304 533779	contact@primeeco.com	https://www.primeeco.com
+S1_0056	Acro Supply Corporation Pvt. Ltd.	527 Fifth Ave.	Dallas	TX	USA	+1 (214) 252-2512	contact@acrosupply.com	
+S1_0057	Falcon Capital Dynamics Inc.	55 Market St	Dallas	TX	USA	+1 (214) 333-5291	contact@falconcapital.com	https://www.falconcapital.com
+S1_0058	First Wireless Ventures Corporation	732 Mission St, Ste. 214	Berlin	Berlin	Germany	+91 0302 262382	contact@firstwireless.com	https://www.firstwireless.com
+S1_0059	GreenLeaf Security Partners Private Limited	568 Market St, Ste. 696	Boston	MA	USA		contact@greenleafsecurity.com	https://www.greenleafsecurity.com
+S1_0060	Omega Micro Technologies Inc.	383 Financial Center Way, Ste. 140	Atlanta	GA	USA	+1 (404) 566-4441	contact@omegamicro.com	https://www.omegamicro.com
+S1_0061	EAGLE AERO GROUP	372 Victoria Rd, Ste. 516	Seattle	WA	USA	+1 (206) 835-3532	contact@eagleaero.com	https://www.eagleaero.com
+S1_0062	IronClad Aero Dynamics	829 Victoria Rd	Chicago	IL	USA	+1 (312) 622-1406	contact@ironcladaero.com	https://www.ironcladaero.com
+S1_0063	First Wireless Partners Private Limited	811 Financial Center Way	Bengaluru	Karnataka	India	+91 0805 163555	contact@firstwireless.com	https://www.firstwireless.com
+S1_0064	ATLANTIC NANO INNOVATIONS		Seattle	WA	USA	+1 (206) 681-4644	contact@atlanticnano.com	
+S1_0065	Royal Media Systems	850 Victoria Rd, Ste. 328	Atlanta	GA	USA	+1 (404) 224-4164	contact@royalmedia.com	https://www.royalmedia.com
+S1_0066	Alpha Supply Holdings Corporation		Austin	TX	USA	+1 (512) 721-7548	contact@alphasupply.com	https://www.alphasupply.com
+S1_0067	EAGLE NETWORK SYSTEMS	128 Financial Center Way, Ste. 282	San Francisco	CA	USA	+1 (415) 794-5349		
+S1_0068	National Eco Industries Pvt. Ltd.	363 High St, Ste. 546	Chennai	Tamil Nadu	India	+91 0449 580255	contact@nationaleco.com	
+S1_0069	Prime Fin Partners Private Limited	204 Industrial Ave.	Toronto	ON	Canada	+91 4168 315831	contact@primefin.com	https://www.primefin.com
+S1_0070	Global Analytics Partners	713 High St, Ste. 854	Berlin	Berlin	Germany	+91 0304 305700	contact@globalanalytics.com	https://www.globalanalytics.com
+S1_0071	Allied Capital Sol.	648 Main St, Ste. 227	Bengaluru	Karnataka	India	+91 0806 038571	contact@alliedcapital.com	https://www.alliedcapital.com
+S1_0072	Starlight Agri Group LLC	344 Mission St, Ste. 667	Chennai	Tamil Nadu	India	+91 0443 135534		
+S1_0073	Royal Capital Group Corporation	703 High St, Ste. 730	Hyderabad	Telangana	India	+91 0406 049101	contact@royalcapital.com	https://www.royalcapital.com
+S1_0074	Alpha Network Dynamics LLC		San Francisco	CA	USA	+1 (415) 793-6279	contact@alphanetwork.com	https://www.alphanetwork.com
+S1_0075	Terra Media Ventures LLC	533 Fifth Ave., Ste. 853	Los Angeles	CA	USA	+1 (310) 373-2389	contact@terramedia.com	https://www.terramedia.com
+S1_0076	Metro Analytics Group LLC	353 Broadway, Ste. 869	Sydney	NSW	Australia		contact@metroanalytics.com	https://www.metroanalytics.com
+S1_0077	Eagle Agri Corporation	160 Market St	Los Angeles	CA	USA	+1 (310) 686-2193	contact@eagleagri.com	https://www.eagleagri.com
+S1_0078	Terra Capital Partners Corporation	209 High St, Ste. 606	Toronto	ON	Canada	+91 4167 705062	contact@terracapital.com	https://www.terracapital.com
+S1_0079	Pacific Micro Group	924 Victoria Rd, Ste. 209	San Francisco	CA	USA	+1 (415) 997-7965	contact@pacificmicro.com	https://www.pacificmicro.com
+S1_0080	Pacific Nano Innovations Inc.	485 Market St, Ste. 224	Manchester	England	UK	+91 0161 8658158	contact@pacificnano.com	https://www.pacificnano.com
+S1_0081	Summit Media Group Inc.	582 Brigade Rd	Manchester	England	UK	+91 0161 8425149		https://www.summitmedia.com
+S1_0082	Vortex Wireless Partners Corporation	446 Cyber City, Ste. 556	Manchester	England	UK	+91 0161 3670226	contact@vortexwireless.com	https://www.vortexwireless.com
+S1_0083	Synapse Robotics Ventures	779 Innovation Blvd., Ste. 383	Dallas	TX	USA	+1 (214) 984-9540	contact@synapserobotics.com	https://www.synapserobotics.com
+S1_0084	Nova Energy Corporation LLC	460 Broadway, Ste. 340	Dallas	TX	USA	+1 (214) 478-6502	contact@novaenergy.com	https://www.novaenergy.com
+S1_0085	Direct Network Solutions Corporation	164 Innovation Blvd.	Boston	MA	USA	+1 (617) 356-4505	contact@directnetwork.com	https://www.directnetwork.com
+S1_0086	United Capital Consulting Corporation	565 Fifth Ave.	Bengaluru	Karnataka	India	+91 0804 470105	contact@unitedcapital.com	https://www.unitedcapital.com
+S1_0087	Optima Capital Consulting Inc.	978 High St	Toronto	ON	Canada	+91 4167 381734	contact@optimacapital.com	https://www.optimacapital.com
+S1_0088	Nova Data Systems	781 Mission St, Ste. 529	Atlanta	GA	USA	+1 (404) 751-9947	contact@novadata.com	https://www.novadata.com
+S1_0089	Spectra Logistics Partners Inc.	509 Innovation Blvd.	Denver	CO	USA	+1 (303) 697-1475	contact@spectralogistics.com	https://www.spectralogistics.com
+S1_0090	Alpha Supply Group LLC	751 Tech Parkway, Ste. 230	Hyderabad	Telangana	India	+91 0409 961107		https://www.alphasupply.com
+S1_0091	GLOBAL FIN INDUSTRIES	688 Market St	Toronto	ON	Canada	+91 4168 190929	contact@globalfin.com	
+S1_0092	Summit Media Enterprises Inc.	276 Mission St	New York	NY	USA	+1 (212) 665-6355	contact@summitmedia.com	https://www.summitmedia.com
+S1_0093	Direct Industrial Partners LLC	294 Victoria Rd, Ste. 531	Hyderabad	Telangana	India	+91 0405 232413	contact@directindustrial.com	https://www.directindustrial.com
+S1_0094	Optima Bio Ventures Private Limited		San Francisco	CA	USA		contact@optimabio.com	
+S1_0095	Falcon Bio Innovations Inc.	782 Market St, Ste. 304	New York	NY	USA	+1 (212) 220-3496	contact@falconbio.com	https://www.falconbio.com
+S1_0096	Pacific Micro Ventures Corporation		Seattle	WA	USA		contact@pacificmicro.com	https://www.pacificmicro.com
+S1_0097	First Logistics Industries LLC	806 Cyber City	Seattle	WA	USA	+1 (206) 518-2771	contact@firstlogistics.com	https://www.firstlogistics.com
+S1_0098	Zenith Data Partners Inc.	599 Silicon Expressway, Ste. 484	Atlanta	GA	USA	+1 (404) 606-4249		https://www.zenithdata.com
+S1_0099	United Pharma Services	114 High St, Ste. 800	Denver	CO	USA		contact@unitedpharma.com	https://www.unitedpharma.com
+S1_0101	Starlight Energy Systems Pvt. Ltd.	879 Mission St, Ste. 208	San Francisco	CA	USA		contact@starlightenergy.com	https://www.starlightenergy.com
+S1_0104	Optima Bio Holdings Inc.	259 Victoria Rd	Pune	Maharashtra	India	+91 0207 358385	contact@optimabio.com	https://www.optimabio.com
+S1_0105	Direct Data Ventures Pvt. Ltd.	196 Fifth Ave.	Bengaluru	Karnataka	India	+91 0805 334434	contact@directdata.com	https://www.directdata.com
+S1_0109	Pacific Fin Services Corporation	323 Silicon Expressway, Ste. 584	Denver	CO	USA	+1 (303) 766-9698	contact@pacificfin.com	https://www.pacificfin.com
+S1_0110	Allied Capital Services Corporation		Berlin	Berlin	Germany	+91 0306 144280	contact@alliedcapital.com	https://www.alliedcapital.com

@@ -1,0 +1,1616 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Business Entity Resolution System — Master Data Management & Deduplication</title>
+  <meta name="description" content="AI-powered Business Entity Resolution System that identifies, matches, and consolidates duplicate business records across heterogeneous data sources with machine learning explainability." />
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  
+  <!-- React & Babel Standalone CDN for instant universal execution -->
+  <script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+  <style>
+/* Modern Glassmorphic Design System for Business Entity Resolution */
+:root {
+  --bg-primary: #090d16;
+  --bg-secondary: #0f172a;
+  --bg-surface: #131d33;
+  --bg-surface-hover: #1c2a47;
+  --bg-glass: rgba(19, 29, 51, 0.7);
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --border-active: rgba(99, 102, 241, 0.4);
+
+  --accent-primary: #6366f1;
+  --accent-primary-hover: #4f46e5;
+  --accent-cyan: #06b6d4;
+  --accent-emerald: #10b981;
+  --accent-amber: #f59e0b;
+  --accent-rose: #ef4444;
+  --accent-purple: #8b5cf6;
+
+  --text-main: #f8fafc;
+  --text-muted: #94a3b8;
+  --text-dim: #64748b;
+
+  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+  
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --shadow-card: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+  --shadow-glow: 0 0 20px rgba(99, 102, 241, 0.25);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-main);
+  font-family: var(--font-sans);
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  background-image: 
+    radial-gradient(at 10% 10%, rgba(99, 102, 241, 0.08) 0px, transparent 50%),
+    radial-gradient(at 90% 90%, rgba(6, 182, 212, 0.06) 0px, transparent 50%);
+  background-attachment: fixed;
+}
+
+.app-layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main-content {
+  flex: 1;
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+}
+
+.navbar {
+  background: var(--bg-glass);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--border-subtle);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  padding: 0.85rem 2rem;
+}
+
+.nav-inner {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  text-decoration: none;
+}
+
+.brand-icon {
+  width: 38px;
+  height: 38px;
+  background: linear-gradient(135deg, var(--accent-primary), var(--accent-cyan));
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.35);
+}
+
+.brand-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  background: linear-gradient(to right, #ffffff, #94a3b8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.brand-badge {
+  font-size: 0.65rem;
+  background: rgba(99, 102, 241, 0.2);
+  color: #a5b4fc;
+  padding: 2px 6px;
+  border-radius: 4px;
+  border: 1px solid rgba(99, 102, 241, 0.3);
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  list-style: none;
+}
+
+.nav-btn {
+  background: transparent;
+  border: none;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  font-weight: 500;
+  font-family: inherit;
+  padding: 0.55rem 1rem;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.2s ease;
+}
+
+.nav-btn:hover {
+  color: var(--text-main);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.nav-btn.active {
+  color: #ffffff;
+  background: rgba(99, 102, 241, 0.15);
+  border: 1px solid var(--border-active);
+  box-shadow: 0 0 12px rgba(99, 102, 241, 0.2);
+}
+
+.nav-status {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.status-pill {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 20px;
+  background: rgba(16, 185, 129, 0.12);
+  color: #34d399;
+  border: 1px solid rgba(16, 185, 129, 0.25);
+}
+
+.status-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: var(--accent-emerald);
+  box-shadow: 0 0 8px var(--accent-emerald);
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { opacity: 0.6; }
+  50% { opacity: 1; transform: scale(1.15); }
+  100% { opacity: 0.6; }
+}
+
+.page-header {
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.page-title {
+  font-size: 1.85rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  color: #ffffff;
+  margin-bottom: 0.35rem;
+}
+
+.page-subtitle {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  max-width: 680px;
+  line-height: 1.5;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+.stat-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 1.4rem;
+  position: relative;
+  overflow: hidden;
+  box-shadow: var(--shadow-card);
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
+.stat-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--card-accent, var(--accent-primary));
+}
+
+.stat-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.75rem;
+}
+
+.stat-label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.stat-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radius-sm);
+  background: rgba(255, 255, 255, 0.05);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.stat-value {
+  font-size: 2.2rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  color: #ffffff;
+  line-height: 1;
+  margin-bottom: 0.4rem;
+}
+
+.stat-desc {
+  font-size: 0.78rem;
+  color: var(--text-dim);
+}
+
+.card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-card);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.25rem;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.card-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.card-desc {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-family: inherit;
+  font-size: 0.88rem;
+  font-weight: 600;
+  padding: 0.65rem 1.25rem;
+  border-radius: var(--radius-sm);
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-decoration: none;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--accent-primary), #4f46e5);
+  color: white;
+  box-shadow: 0 4px 14px rgba(99, 102, 241, 0.35);
+}
+
+.btn-primary:hover {
+  opacity: 0.92;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(99, 102, 241, 0.45);
+}
+
+.btn-secondary {
+  background: rgba(255, 255, 255, 0.07);
+  color: var(--text-main);
+  border: 1px solid var(--border-subtle);
+}
+
+.btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.btn-sm {
+  padding: 0.4rem 0.75rem;
+  font-size: 0.8rem;
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.input-control {
+  background: rgba(15, 23, 42, 0.8);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  color: var(--text-main);
+  font-family: inherit;
+  font-size: 0.9rem;
+  padding: 0.65rem 1rem;
+  outline: none;
+  transition: border-color 0.2s;
+  width: 100%;
+}
+
+.input-control:focus {
+  border-color: var(--accent-primary);
+  box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.25);
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 3px 8px;
+  border-radius: 6px;
+  line-height: 1.2;
+}
+
+.badge-match {
+  background: rgba(16, 185, 129, 0.15);
+  color: #34d399;
+  border: 1px solid rgba(16, 185, 129, 0.3);
+}
+
+.badge-potential {
+  background: rgba(245, 158, 11, 0.15);
+  color: #fbbf24;
+  border: 1px solid rgba(245, 158, 11, 0.3);
+}
+
+.badge-review {
+  background: rgba(239, 68, 68, 0.15);
+  color: #f87171;
+  border: 1px solid rgba(239, 68, 68, 0.3);
+}
+
+.badge-source {
+  background: rgba(99, 102, 241, 0.15);
+  color: #a5b4fc;
+  border: 1px solid rgba(99, 102, 241, 0.25);
+}
+
+.confidence-bar-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.confidence-bar-bg {
+  flex: 1;
+  height: 6px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.confidence-bar-fill {
+  height: 100%;
+  border-radius: 10px;
+  transition: width 0.4s ease;
+}
+
+.confidence-text {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  font-weight: 600;
+  min-width: 48px;
+  text-align: right;
+}
+
+.table-container {
+  overflow-x: auto;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-subtle);
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 0.88rem;
+}
+
+.data-table th {
+  background: rgba(15, 23, 42, 0.9);
+  color: var(--text-muted);
+  font-weight: 600;
+  padding: 0.85rem 1rem;
+  border-bottom: 1px solid var(--border-subtle);
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+  white-space: nowrap;
+}
+
+.data-table td {
+  padding: 0.95rem 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+  color: var(--text-main);
+  vertical-align: middle;
+}
+
+.data-table tr:hover td {
+  background: var(--bg-surface-hover);
+}
+
+.data-table .mono {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: #93c5fd;
+}
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(4, 7, 15, 0.82);
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 200;
+  padding: 1.5rem;
+}
+
+.modal-content {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  max-width: 900px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7);
+  padding: 2rem;
+}
+
+.modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid var(--border-subtle);
+  padding-bottom: 1rem;
+}
+
+.entity-tree-node {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 1rem;
+  margin-bottom: 0.75rem;
+  border-left: 4px solid var(--accent-primary);
+}
+
+.entity-tree-child {
+  margin-left: 2rem;
+  position: relative;
+  background: rgba(15, 23, 42, 0.6);
+  border-left: 4px solid var(--accent-cyan);
+}
+
+.entity-tree-child::before {
+  content: '';
+  position: absolute;
+  top: -12px;
+  left: -1.5rem;
+  width: 1.2rem;
+  height: 24px;
+  border-left: 2px dashed rgba(255, 255, 255, 0.2);
+  border-bottom: 2px dashed rgba(255, 255, 255, 0.2);
+}
+
+.upload-zone {
+  border: 2px dashed rgba(99, 102, 241, 0.35);
+  background: rgba(99, 102, 241, 0.03);
+  border-radius: var(--radius-lg);
+  padding: 2.5rem 1.5rem;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.upload-zone:hover {
+  border-color: var(--accent-primary);
+  background: rgba(99, 102, 241, 0.08);
+}
+
+.cm-grid {
+  display: grid;
+  grid-template-columns: 100px 1fr 1fr;
+  gap: 8px;
+  align-items: center;
+  text-align: center;
+  font-size: 0.88rem;
+}
+
+.cm-cell {
+  padding: 1.25rem 0.5rem;
+  border-radius: var(--radius-sm);
+  font-weight: 700;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.cm-tp { background: rgba(16, 185, 129, 0.2); border: 1px solid rgba(16, 185, 129, 0.4); color: #34d399; }
+.cm-tn { background: rgba(99, 102, 241, 0.2); border: 1px solid rgba(99, 102, 241, 0.4); color: #a5b4fc; }
+.cm-fp { background: rgba(239, 68, 68, 0.2); border: 1px solid rgba(239, 68, 68, 0.4); color: #f87171; }
+.cm-fn { background: rgba(245, 158, 11, 0.2); border: 1px solid rgba(245, 158, 11, 0.4); color: #fbbf24; }
+  </style>
+</head>
+<body>
+  <div id="root"></div>
+
+  <script type="text/babel">
+    const { useState, useEffect } = React;
+
+    // API Helpers
+    const api = {
+      async getHealth() {
+        const res = await fetch('/api/health');
+        return res.json();
+      },
+      async getStatistics() {
+        const res = await fetch('/api/statistics');
+        return res.json();
+      },
+      async getEntities(params = {}) {
+        const q = new URLSearchParams(params).toString();
+        const res = await fetch(`/api/entities?${q}`);
+        return res.json();
+      },
+      async getEntityDetails(id) {
+        const res = await fetch(`/api/entities/${encodeURIComponent(id)}`);
+        return res.json();
+      },
+      async getResults(params = {}) {
+        const q = new URLSearchParams(params).toString();
+        const res = await fetch(`/api/results?${q}`);
+        return res.json();
+      },
+      async getEvaluation(params = {}) {
+        const q = new URLSearchParams(params).toString();
+        const res = await fetch(`/api/evaluation?${q}`);
+        return res.json();
+      },
+      async triggerMatch(body) {
+        const res = await fetch('/api/match', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(body)
+        });
+        return res.json();
+      },
+      async uploadFiles(formData) {
+        const res = await fetch('/api/upload', {
+          method: 'POST',
+          body: formData
+        });
+        return res.json();
+      },
+      async compareRecords(record1, record2, threshold = 60.0) {
+        const res = await fetch('/api/compare', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ record1, record2, threshold })
+        });
+        return res.json();
+      },
+      async reviewMatch(recordId1, recordId2, action) {
+        const res = await fetch('/api/review', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ record_id_1: recordId1, record_id_2: recordId2, action })
+        });
+        return res.json();
+      },
+      getExportEntitiesUrl(format = 'csv', has_duplicates = null) {
+        const params = new URLSearchParams();
+        params.append('format', format);
+        if (has_duplicates !== null) params.append('has_duplicates', has_duplicates);
+        return `/api/export/entities?${params.toString()}`;
+      },
+      getExportResultsUrl(format = 'csv', status = '') {
+        const params = new URLSearchParams();
+        params.append('format', format);
+        if (status) params.append('status', status);
+        return `/api/export/results?${params.toString()}`;
+      }
+    };
+
+    // Components
+    function Navbar({ activeTab, setActiveTab, health, onRerunMatch, isMatching }) {
+      const navItems = [
+        { id: 'dashboard', label: 'Dashboard', icon: '📊' },
+        { id: 'upload', label: 'Upload Data', icon: '📁' },
+        { id: 'matches', label: 'Entity Matches', icon: '🔗' },
+        { id: 'entities', label: 'Entities', icon: '🏢' },
+        { id: 'compare', label: 'Live Matcher', icon: '🔬' },
+        { id: 'statistics', label: 'Statistics', icon: '📈' },
+        { id: 'evaluation', label: 'Evaluation', icon: '🎯' },
+      ];
+
+      return (
+        <nav className="navbar">
+          <div className="nav-inner">
+            <div className="brand">
+              <div className="brand-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm6 12H6v-1.4c0-2 4-3.1 6-3.1s6 1.1 6 3.1V18z"/>
+                </svg>
+              </div>
+              <div>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '0.4rem' }}>
+                  <span className="brand-title">EntityResolve</span>
+                  <span className="brand-badge">ML AI</span>
+                </div>
+                <div style={{ fontSize: '0.72rem', color: '#64748b' }}>Enterprise Business Entity Resolution</div>
+              </div>
+            </div>
+
+            <ul className="nav-links">
+              {navItems.map((item) => (
+                <li key={item.id}>
+                  <button
+                    className={`nav-btn ${activeTab === item.id ? 'active' : ''}`}
+                    onClick={() => setActiveTab(item.id)}
+                  >
+                    <span>{item.icon}</span>
+                    <span>{item.label}</span>
+                  </button>
+                </li>
+              ))}
+            </ul>
+
+            <div className="nav-status">
+              <button
+                className="btn btn-secondary btn-sm"
+                onClick={onRerunMatch}
+                disabled={isMatching}
+              >
+                {isMatching ? '⚡ Matching...' : '⚡ Re-Run Resolution'}
+              </button>
+              
+              <div className="status-pill">
+                <span className="status-dot"></span>
+                <span>{health?.status === 'healthy' ? (health.model_loaded ? 'ML Online' : 'Active') : 'Connecting'}</span>
+              </div>
+            </div>
+          </div>
+        </nav>
+      );
+    }
+
+    function Dashboard({ stats, onNavigate }) {
+      if (!stats) return <div className="card" style={{ padding: '3rem', textAlign: 'center', color: '#94a3b8' }}>Loading metrics...</div>;
+
+      const statCards = [
+        { label: 'Total Records', value: stats.total_records, desc: 'Ingested across all sources', accent: '#6366F1', icon: '📑' },
+        { label: 'Unique Entities', value: stats.unique_entities, desc: 'Distinct canonical businesses', accent: '#06B6D4', icon: '🏢' },
+        { label: 'Potential Matches', value: stats.potential_matches, desc: 'Candidate cross-source pairs', accent: '#F59E0B', icon: '🔗' },
+        { label: 'High Confidence', value: stats.high_confidence_matches, desc: 'Matches with score ≥ 75%', accent: '#10B981', icon: '✨' },
+        { label: 'Duplicate Records', value: stats.duplicate_records, desc: 'Redundant rows consolidated', accent: '#8B5CF6', icon: '🧹' }
+      ];
+
+      return (
+        <div>
+          <div className="page-header">
+            <div>
+              <h1 className="page-title">Business Entity Resolution</h1>
+              <p className="page-subtitle">
+                Identify and consolidate duplicate business records across multiple data sources.
+                Combines robust normalization, multi-key blocking, RapidFuzz similarity scoring, and machine-learning classification.
+              </p>
+            </div>
+            <div style={{ display: 'flex', gap: '0.75rem' }}>
+              <button className="btn btn-secondary" onClick={() => onNavigate('upload')}>📁 Upload Sources</button>
+              <button className="btn btn-primary" onClick={() => onNavigate('matches')}>🔗 View Matches</button>
+            </div>
+          </div>
+
+          <div className="stats-grid">
+            {statCards.map((card, idx) => (
+              <div key={idx} className="stat-card" style={{ '--card-accent': card.accent }}>
+                <div className="stat-header">
+                  <span className="stat-label">{card.label}</span>
+                  <span className="stat-icon" style={{ fontSize: '1.1rem' }}>{card.icon}</span>
+                </div>
+                <div className="stat-value">{card.value.toLocaleString()}</div>
+                <div className="stat-desc">{card.desc}</div>
+              </div>
+            ))}
+          </div>
+
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(400px, 1fr))', gap: '1.5rem', marginBottom: '1.5rem' }}>
+            <div className="card">
+              <div className="card-header">
+                <div>
+                  <h2 className="card-title">Confidence Distribution</h2>
+                  <div className="card-desc">Pairwise classification tiers across candidate pairs</div>
+                </div>
+                <button className="btn btn-secondary btn-sm" onClick={() => onNavigate('statistics')}>Detailed Analytics →</button>
+              </div>
+
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+                {Object.entries(stats.confidence_distribution || {}).map(([tier, count]) => {
+                  const allSum = Object.values(stats.confidence_distribution).reduce((a, b) => a + b, 0) || 1;
+                  const pct = Math.round((count / allSum) * 100);
+                  let barColor = tier.includes('Very High') ? '#10B981' : tier.includes('High') ? '#06B6D4' : tier.includes('Possible') ? '#F59E0B' : '#64748B';
+                  return (
+                    <div key={tier}>
+                      <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '0.85rem', marginBottom: '0.35rem' }}>
+                        <span style={{ fontWeight: 600, color: '#e2e8f0' }}>{tier}</span>
+                        <span style={{ fontFamily: 'var(--font-mono)', color: '#94a3b8' }}>{count} pairs ({pct}%)</span>
+                      </div>
+                      <div className="confidence-bar-bg">
+                        <div className="confidence-bar-fill" style={{ width: `${Math.min(100, pct * 1.5 || (count > 0 ? 5 : 0))}%`, backgroundColor: barColor }} />
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+
+            <div className="card">
+              <div className="card-header">
+                <div>
+                  <h2 className="card-title">Sources Distribution</h2>
+                  <div className="card-desc">Records ingested per data source</div>
+                </div>
+                <button className="btn btn-secondary btn-sm" onClick={() => onNavigate('upload')}>Manage Sources →</button>
+              </div>
+
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+                {Object.entries(stats.records_per_source || {}).map(([src, count]) => {
+                  const pct = Math.round((count / Math.max(1, stats.total_records)) * 100);
+                  return (
+                    <div key={src} style={{ background: 'rgba(15, 23, 42, 0.6)', padding: '0.9rem 1.1rem', borderRadius: '8px', border: '1px solid var(--border-subtle)' }}>
+                      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '0.4rem' }}>
+                        <span className="badge badge-source">{src}</span>
+                        <span style={{ fontFamily: 'var(--font-mono)', fontWeight: 600, color: '#38bdf8' }}>{count} records ({pct}%)</span>
+                      </div>
+                      <div className="confidence-bar-bg">
+                        <div className="confidence-bar-fill" style={{ width: `${pct}%`, backgroundColor: '#06B6D4' }} />
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+          </div>
+        </div>
+      );
+    }
+
+    function FileUpload({ onResolutionComplete }) {
+      const [s1, setS1] = useState(null);
+      const [s2, setS2] = useState(null);
+      const [s3, setS3] = useState(null);
+      const [loading, setLoading] = useState(false);
+      const [msg, setMsg] = useState({ type: '', text: '' });
+      const [uploadSummary, setUploadSummary] = useState(null);
+
+      const handleUpload = async (e) => {
+        e.preventDefault();
+        if (!s1 && !s2 && !s3) {
+          setMsg({ type: 'error', text: 'Please select at least one TSV/CSV file to upload.' });
+          return;
+        }
+        setLoading(true);
+        setMsg({ type: '', text: '' });
+        try {
+          const fd = new FormData();
+          if (s1) fd.append('source1', s1);
+          if (s2) fd.append('source2', s2);
+          if (s3) fd.append('source3', s3);
+          const res = await api.uploadFiles(fd);
+          setUploadSummary(res);
+          setMsg({ type: 'success', text: res.message || 'Data uploaded successfully!' });
+          if (onResolutionComplete) onResolutionComplete();
+        } catch (err) {
+          setMsg({ type: 'error', text: err.message || 'Upload failed' });
+        } finally {
+          setLoading(false);
+        }
+      };
+
+      const handleBenchmarkLoad = async (type) => {
+        setLoading(true);
+        setMsg({ type: '', text: '' });
+        try {
+          const res = await api.triggerMatch({ dataset_type: type, threshold: 60.0 });
+          setMsg({ type: 'success', text: `Loaded and resolved ${type.toUpperCase()} dataset (${res.unique_entities_found} unique entities resolved)!` });
+          if (onResolutionComplete) onResolutionComplete();
+        } catch (err) {
+          setMsg({ type: 'error', text: err.message || 'Failed to load benchmark' });
+        } finally {
+          setLoading(false);
+        }
+      };
+
+      return (
+        <div>
+          <div className="page-header">
+            <div>
+              <h1 className="page-title">Dataset Management & Ingestion</h1>
+              <p className="page-subtitle">Upload custom multi-source business data files (.tsv or .csv), or switch between pre-configured benchmark datasets.</p>
+            </div>
+            <div style={{ display: 'flex', gap: '0.6rem' }}>
+              <button className="btn btn-secondary btn-sm" onClick={() => handleBenchmarkLoad('train')} disabled={loading}>🔄 Load Benchmark Train Set</button>
+              <button className="btn btn-secondary btn-sm" onClick={() => handleBenchmarkLoad('test')} disabled={loading}>🔄 Load Benchmark Test Set</button>
+            </div>
+          </div>
+
+          {msg.text && (
+            <div style={{ background: msg.type === 'error' ? 'rgba(239, 68, 68, 0.15)' : 'rgba(16, 185, 129, 0.15)', border: `1px solid ${msg.type === 'error' ? 'rgba(239, 68, 68, 0.3)' : 'rgba(16, 185, 129, 0.3)'}`, color: msg.type === 'error' ? '#fca5a5' : '#6ee7b7', padding: '1rem', borderRadius: '8px', marginBottom: '1.5rem' }}>
+              {msg.text}
+            </div>
+          )}
+
+          <form onSubmit={handleUpload}>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '1.25rem', marginBottom: '1.5rem' }}>
+              {[{ id: 's1', label: 'Source 1 Dataset', val: s1, setVal: setS1, tag: 'Required / Primary' },
+                { id: 's2', label: 'Source 2 Dataset', val: s2, setVal: setS2, tag: 'Cross-Source' },
+                { id: 's3', label: 'Source 3 Dataset', val: s3, setVal: setS3, tag: 'Optional Source' }].map((box) => (
+                <div key={box.id} className="card">
+                  <div className="card-header">
+                    <span className="card-title">{box.label}</span>
+                    <span className="badge badge-source">{box.tag}</span>
+                  </div>
+                  <div className="upload-zone" onClick={() => document.getElementById(`${box.id}-file`).click()}>
+                    <input id={`${box.id}-file`} type="file" accept=".tsv,.csv,.txt" style={{ display: 'none' }} onChange={(e) => box.setVal(e.target.files[0])} />
+                    <div style={{ fontSize: '2rem', marginBottom: '0.4rem' }}>📄</div>
+                    <div style={{ fontWeight: 600, fontSize: '0.9rem', color: '#f8fafc' }}>
+                      {box.val ? box.val.name : `Select ${box.label}`}
+                    </div>
+                    <div style={{ fontSize: '0.75rem', color: '#64748b', marginTop: '0.2rem' }}>
+                      {box.val ? `${(box.val.size / 1024).toFixed(1)} KB` : 'Supports TSV, CSV'}
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '2rem' }}>
+              <button type="submit" className="btn btn-primary" style={{ padding: '0.85rem 2.5rem', fontSize: '1rem' }} disabled={loading || (!s1 && !s2 && !s3)}>
+                {loading ? '⚙️ Processing & Matching...' : '🚀 Run Entity Resolution'}
+              </button>
+            </div>
+          </form>
+
+          {uploadSummary && uploadSummary.sources_summary && (
+            <div className="card">
+              <h2 className="card-title" style={{ marginBottom: '1rem' }}>Ingested Sources Summary</h2>
+              <div className="table-container">
+                <table className="data-table">
+                  <thead>
+                    <tr><th>Source</th><th>File Name</th><th>Record Count</th><th>Detected Columns</th><th>Status</th></tr>
+                  </thead>
+                  <tbody>
+                    {uploadSummary.sources_summary.map((src, i) => (
+                      <tr key={i}>
+                        <td><strong>{src.source_name}</strong></td>
+                        <td className="mono">{src.filename}</td>
+                        <td><span className="badge badge-source">{src.record_count} rows</span></td>
+                        <td style={{ fontSize: '0.78rem' }}>{src.columns_detected.join(', ')}</td>
+                        <td><span className="badge badge-match">✓ Validated</span></td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          )}
+        </div>
+      );
+    }
+
+    function MatchTable() {
+      const [results, setResults] = useState([]);
+      const [total, setTotal] = useState(0);
+      const [page, setPage] = useState(1);
+      const [totalPages, setTotalPages] = useState(1);
+      const [search, setSearch] = useState('');
+      const [statusFilter, setStatusFilter] = useState('');
+      const [tierFilter, setTierFilter] = useState('');
+      const [selectedPair, setSelectedPair] = useState(null);
+      const [loading, setLoading] = useState(true);
+      const [reviewMsg, setReviewMsg] = useState('');
+
+      const load = async () => {
+        setLoading(true);
+        try {
+          const res = await api.getResults({ search, status: statusFilter, tier: tierFilter, page, limit: 15 });
+          setResults(res.results || []);
+          setTotal(res.total || 0);
+          setTotalPages(res.total_pages || 1);
+        } catch (e) {
+          console.error(e);
+        } finally {
+          setLoading(false);
+        }
+      };
+
+      useEffect(() => { load(); }, [page, statusFilter, tierFilter]);
+
+      const handleReview = async (pair, action) => {
+        try {
+          await api.reviewMatch(pair.record_id_1, pair.record_id_2, action);
+          setReviewMsg(`Marked (${pair.record_id_1} ↔ ${pair.record_id_2}) as ${action === 'confirm' ? 'Confirmed Match' : 'Rejected Non-Match'}`);
+          if (selectedPair) {
+            setSelectedPair({
+              ...selectedPair,
+              status: action === 'confirm' ? 'Match' : 'Non-Match',
+              tier: action === 'confirm' ? 'Manually Confirmed' : 'Manually Rejected',
+              is_match: action === 'confirm'
+            });
+          }
+          setTimeout(() => setReviewMsg(''), 4000);
+          load();
+        } catch (err) {
+          console.error('Review failed:', err);
+        }
+      };
+
+      const getScoreColor = (s) => s >= 90 ? '#10B981' : s >= 75 ? '#06B6D4' : s >= 60 ? '#F59E0B' : '#EF4444';
+
+      return (
+        <div>
+          <div className="page-header">
+            <div>
+              <h1 className="page-title">Candidate Match Results</h1>
+              <p className="page-subtitle">Pairwise comparisons across sources with confidence scoring and machine-learning explainability evidence.</p>
+            </div>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', flexWrap: 'wrap' }}>
+              <a href={api.getExportResultsUrl('csv', statusFilter)} download="matched_pairs.csv" className="btn btn-secondary btn-sm">📥 Export CSV</a>
+              <a href={api.getExportResultsUrl('json', statusFilter)} download="matched_pairs.json" className="btn btn-secondary btn-sm">📥 Export JSON</a>
+              <span className="badge badge-source" style={{ padding: '6px 12px', fontSize: '0.85rem' }}>Total Pairs: {total.toLocaleString()}</span>
+            </div>
+          </div>
+
+          {reviewMsg && (
+            <div style={{ background: 'rgba(16, 185, 129, 0.15)', border: '1px solid rgba(16, 185, 129, 0.3)', color: '#6ee7b7', padding: '0.8rem 1.2rem', borderRadius: '8px', marginBottom: '1.25rem' }}>
+              ✓ {reviewMsg}
+            </div>
+          )}
+
+          <div className="card" style={{ padding: '1rem', marginBottom: '1.25rem' }}>
+            <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
+              <input type="text" className="input-control" style={{ flex: 1, minWidth: '240px' }} placeholder="Search business name or ID..." value={search} onChange={(e) => setSearch(e.target.value)} onKeyDown={(e) => e.key === 'Enter' && load()} />
+              <select className="input-control" style={{ width: '180px' }} value={statusFilter} onChange={(e) => { setStatusFilter(e.target.value); setPage(1); }}>
+                <option value="">All Statuses</option>
+                <option value="Match">Match</option>
+                <option value="Potential Match">Potential Match</option>
+                <option value="Review Required">Review Required</option>
+                <option value="Non-Match">Non-Match</option>
+              </select>
+              <button className="btn btn-primary btn-sm" onClick={load}>🔍 Search</button>
+            </div>
+          </div>
+
+          <div className="card" style={{ padding: 0, overflow: 'hidden' }}>
+            <div className="table-container" style={{ border: 'none' }}>
+              <table className="data-table">
+                <thead>
+                  <tr>
+                    <th>Record 1 (Source)</th>
+                    <th>Record 2 (Source)</th>
+                    <th>Confidence Score</th>
+                    <th>Status</th>
+                    <th>Explainability & Actions</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {loading ? (
+                    <tr><td colSpan="5" style={{ textAlign: 'center', padding: '3rem', color: '#94a3b8' }}>Loading pairs...</td></tr>
+                  ) : results.length === 0 ? (
+                    <tr><td colSpan="5" style={{ textAlign: 'center', padding: '3rem', color: '#94a3b8' }}>No records found.</td></tr>
+                  ) : (
+                    results.map((p, i) => (
+                      <tr key={i}>
+                        <td>
+                          <div style={{ fontWeight: 600, color: '#f8fafc' }}>{p.business_name_1}</div>
+                          <span className="mono">{p.record_id_1}</span> <span className="badge badge-source" style={{ fontSize: '0.7rem' }}>{p.source_1}</span>
+                        </td>
+                        <td>
+                          <div style={{ fontWeight: 600, color: '#f8fafc' }}>{p.business_name_2}</div>
+                          <span className="mono">{p.record_id_2}</span> <span className="badge badge-source" style={{ fontSize: '0.7rem' }}>{p.source_2}</span>
+                        </td>
+                        <td style={{ minWidth: '150px' }}>
+                          <div className="confidence-bar-wrapper">
+                            <div className="confidence-bar-bg">
+                              <div className="confidence-bar-fill" style={{ width: `${p.confidence_score}%`, backgroundColor: getScoreColor(p.confidence_score) }} />
+                            </div>
+                            <span className="confidence-text" style={{ color: getScoreColor(p.confidence_score) }}>{p.confidence_score.toFixed(1)}%</span>
+                          </div>
+                        </td>
+                        <td>
+                          <span className={`badge ${p.status === 'Match' ? 'badge-match' : p.status === 'Potential Match' ? 'badge-potential' : 'badge-review'}`}>
+                            {p.status}
+                          </span>
+                        </td>
+                        <td>
+                          <div style={{ display: 'flex', gap: '0.35rem', alignItems: 'center' }}>
+                            <button className="btn btn-secondary btn-sm" onClick={() => setSelectedPair(p)}>🔍 Explain</button>
+                            <button className="btn btn-secondary btn-sm" style={{ color: '#34d399', borderColor: 'rgba(16, 185, 129, 0.3)', padding: '0.35rem 0.55rem' }} onClick={() => handleReview(p, 'confirm')} title="Confirm Match">✓</button>
+                            <button className="btn btn-secondary btn-sm" style={{ color: '#f87171', borderColor: 'rgba(239, 68, 68, 0.3)', padding: '0.35rem 0.55rem' }} onClick={() => handleReview(p, 'reject')} title="Reject Match">✗</button>
+                          </div>
+                        </td>
+                      </tr>
+                    ))
+                  )}
+                </tbody>
+              </table>
+            </div>
+
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '1rem', borderTop: '1px solid var(--border-subtle)' }}>
+              <span style={{ fontSize: '0.82rem', color: '#94a3b8' }}>Page {page} of {totalPages} ({total} pairs)</span>
+              <div style={{ display: 'flex', gap: '0.5rem' }}>
+                <button className="btn btn-secondary btn-sm" disabled={page <= 1} onClick={() => setPage(p => p - 1)}>← Prev</button>
+                <button className="btn btn-secondary btn-sm" disabled={page >= totalPages} onClick={() => setPage(p => p + 1)}>Next →</button>
+              </div>
+            </div>
+          </div>
+
+          {selectedPair && (
+            <div className="modal-overlay" onClick={() => setSelectedPair(null)}>
+              <div className="modal-content" onClick={e => e.stopPropagation()}>
+                <div className="modal-header">
+                  <div>
+                    <h2 style={{ fontSize: '1.25rem', fontWeight: 800, color: '#fff' }}>Match Explainability & Evidence</h2>
+                    <div style={{ fontSize: '0.82rem', color: '#94a3b8' }}>Pair comparison ({selectedPair.record_id_1} ↔ {selectedPair.record_id_2})</div>
+                  </div>
+                  <button className="btn btn-secondary btn-sm" onClick={() => setSelectedPair(null)}>✕</button>
+                </div>
+
+                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem', marginBottom: '1.25rem' }}>
+                  <div style={{ background: 'rgba(15, 23, 42, 0.8)', padding: '1rem', borderRadius: '8px', border: '1px solid var(--border-subtle)' }}>
+                    <div style={{ fontSize: '0.75rem', color: '#64748b' }}>{selectedPair.source_1} ({selectedPair.record_id_1})</div>
+                    <div style={{ fontWeight: 700, color: '#fff', marginTop: '0.2rem' }}>{selectedPair.business_name_1}</div>
+                  </div>
+                  <div style={{ background: 'rgba(15, 23, 42, 0.8)', padding: '1rem', borderRadius: '8px', border: '1px solid var(--border-subtle)' }}>
+                    <div style={{ fontSize: '0.75rem', color: '#64748b' }}>{selectedPair.source_2} ({selectedPair.record_id_2})</div>
+                    <div style={{ fontWeight: 700, color: '#fff', marginTop: '0.2rem' }}>{selectedPair.business_name_2}</div>
+                  </div>
+                </div>
+
+                <div style={{ background: 'rgba(99, 102, 241, 0.1)', padding: '1rem', borderRadius: '8px', marginBottom: '1.25rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                  <div>
+                    <div style={{ fontSize: '0.78rem', color: '#a5b4fc', textTransform: 'uppercase' }}>Consensus Confidence</div>
+                    <div style={{ fontSize: '1.75rem', fontWeight: 800, color: '#fff' }}>{selectedPair.confidence_score.toFixed(1)}%</div>
+                  </div>
+                  <span className={`badge ${selectedPair.status === 'Match' ? 'badge-match' : 'badge-potential'}`} style={{ fontSize: '0.9rem', padding: '6px 12px' }}>
+                    {selectedPair.status}
+                  </span>
+                </div>
+
+                <h3 style={{ fontSize: '0.95rem', fontWeight: 700, color: '#e2e8f0', marginBottom: '0.75rem' }}>Attribute Similarities:</h3>
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '0.75rem', marginBottom: '1.25rem' }}>
+                  {selectedPair.similarity_breakdown && [
+                    { label: 'Business Name', val: selectedPair.similarity_breakdown.business_name_similarity },
+                    { label: 'Address', val: selectedPair.similarity_breakdown.address_similarity },
+                    { label: 'Phone', val: selectedPair.similarity_breakdown.phone_similarity },
+                    { label: 'Email', val: selectedPair.similarity_breakdown.email_similarity },
+                    { label: 'Website', val: selectedPair.similarity_breakdown.website_similarity },
+                    { label: 'City Match', val: selectedPair.similarity_breakdown.city_similarity },
+                  ].map((it, i) => (
+                    <div key={i} style={{ background: 'rgba(255, 255, 255, 0.03)', padding: '0.7rem', borderRadius: '6px' }}>
+                      <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '0.8rem', marginBottom: '0.25rem' }}>
+                        <span>{it.label}</span>
+                        <span style={{ fontWeight: 700, color: getScoreColor(it.val) }}>{it.val}%</span>
+                      </div>
+                      <div className="confidence-bar-bg">
+                        <div className="confidence-bar-fill" style={{ width: `${it.val}%`, backgroundColor: getScoreColor(it.val) }} />
+                      </div>
+                    </div>
+                  ))}
+                </div>
+
+                <h3 style={{ fontSize: '0.95rem', fontWeight: 700, color: '#e2e8f0', marginBottom: '0.4rem' }}>Reasoning Evidence:</h3>
+                <ul style={{ paddingLeft: '1.25rem', color: '#cbd5e1', fontSize: '0.85rem', lineHeight: '1.6', marginBottom: '1.25rem' }}>
+                  {selectedPair.evidence_summary && selectedPair.evidence_summary.map((ev, i) => (
+                    <li key={i}>{ev}</li>
+                  ))}
+                </ul>
+
+                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', borderTop: '1px solid var(--border-subtle)', paddingTop: '1rem' }}>
+                  <div style={{ display: 'flex', gap: '0.5rem' }}>
+                    <button className="btn btn-sm" style={{ background: 'rgba(16, 185, 129, 0.2)', color: '#34d399', border: '1px solid rgba(16, 185, 129, 0.4)' }} onClick={() => handleReview(selectedPair, 'confirm')}>✓ Confirm Match</button>
+                    <button className="btn btn-sm" style={{ background: 'rgba(239, 68, 68, 0.2)', color: '#f87171', border: '1px solid rgba(239, 68, 68, 0.4)' }} onClick={() => handleReview(selectedPair, 'reject')}>✗ Reject Match</button>
+                  </div>
+                  <button className="btn btn-primary btn-sm" onClick={() => setSelectedPair(null)}>Close Evidence</button>
+                </div>
+              </div>
+            </div>
+          )}
+        </div>
+      );
+    }
+
+    function EntityDetails() {
+      const [entities, setEntities] = useState([]);
+      const [total, setTotal] = useState(0);
+      const [page, setPage] = useState(1);
+      const [search, setSearch] = useState('');
+      const [selectedEnt, setSelectedEnt] = useState(null);
+      const [loading, setLoading] = useState(true);
+
+      const load = async () => {
+        setLoading(true);
+        try {
+          const res = await api.getEntities({ search, page, limit: 12 });
+          setEntities(res.entities || []);
+          setTotal(res.total || 0);
+        } catch (e) {
+          console.error(e);
+        } finally {
+          setLoading(false);
+        }
+      };
+
+      useEffect(() => { load(); }, [page]);
+
+      return (
+        <div>
+          <div className="page-header">
+            <div>
+              <h1 className="page-title">Canonical Business Entities</h1>
+              <p className="page-subtitle">Consolidated master business records resolved across multiple noisy source systems.</p>
+            </div>
+            <div style={{ display: 'flex', gap: '0.6rem', alignItems: 'center', flexWrap: 'wrap' }}>
+              <a href={api.getExportEntitiesUrl('csv')} download="canonical_entities.csv" className="btn btn-secondary btn-sm">📥 Export CSV</a>
+              <a href={api.getExportEntitiesUrl('json')} download="canonical_entities.json" className="btn btn-secondary btn-sm">📥 Export JSON</a>
+              <span className="badge badge-match" style={{ padding: '6px 12px', fontSize: '0.85rem' }}>Master Entities: {total}</span>
+            </div>
+          </div>
+
+          <div className="card" style={{ padding: '1rem', marginBottom: '1.25rem' }}>
+            <div style={{ display: 'flex', gap: '1rem' }}>
+              <input type="text" className="input-control" placeholder="Search master business entity..." value={search} onChange={(e) => setSearch(e.target.value)} onKeyDown={(e) => e.key === 'Enter' && load()} />
+              <button className="btn btn-primary btn-sm" onClick={load}>🔍 Search</button>
+            </div>
+          </div>
+
+          {loading ? (
+            <div className="card" style={{ textAlign: 'center', padding: '3rem', color: '#94a3b8' }}>Loading master entities...</div>
+          ) : (
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '1.25rem', marginBottom: '1.5rem' }}>
+              {entities.map((ent) => (
+                <div key={ent.entity_id} className="card" style={{ cursor: 'pointer', margin: 0, borderLeft: ent.duplicate_count > 0 ? '4px solid #6366F1' : '4px solid #64748B' }} onClick={() => setSelectedEnt(ent)}>
+                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '0.5rem' }}>
+                    <span className="mono" style={{ background: 'rgba(255,255,255,0.06)', padding: '2px 8px', borderRadius: '4px' }}>{ent.entity_id}</span>
+                    <span className="badge badge-match">{ent.records_count} Records Merged</span>
+                  </div>
+                  <h2 style={{ fontSize: '1.1rem', fontWeight: 700, color: '#fff', marginBottom: '0.5rem' }}>{ent.canonical_name}</h2>
+                  <div style={{ fontSize: '0.82rem', color: '#cbd5e1', lineHeight: '1.4' }}>
+                    {ent.city && <div>📍 {ent.city}{ent.state ? `, ${ent.state}` : ''}</div>}
+                    {ent.phone && <div>📞 {ent.phone}</div>}
+                    {ent.email && <div>✉️ {ent.email}</div>}
+                  </div>
+                  <div style={{ marginTop: '0.75rem', paddingTop: '0.5rem', borderTop: '1px solid var(--border-subtle)', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                    <div style={{ display: 'flex', gap: '0.25rem' }}>
+                      {ent.sources && ent.sources.map((s, i) => <span key={i} className="badge badge-source" style={{ fontSize: '0.65rem' }}>{s}</span>)}
+                    </div>
+                    <span style={{ fontSize: '0.8rem', color: '#818cf8', fontWeight: 600 }}>Inspect Profile →</span>
+                  </div>
+                </div>
+              ))}
+            </div>
+          )}
+
+          {selectedEnt && (
+            <div className="modal-overlay" onClick={() => setSelectedEnt(null)}>
+              <div className="modal-content" onClick={e => e.stopPropagation()}>
+                <div className="modal-header">
+                  <div>
+                    <span className="mono" style={{ background: 'rgba(99, 102, 241, 0.2)', color: '#a5b4fc', padding: '2px 8px', borderRadius: '4px' }}>{selectedEnt.entity_id}</span>
+                    <h2 style={{ fontSize: '1.35rem', fontWeight: 800, color: '#fff', marginTop: '0.3rem' }}>{selectedEnt.canonical_name}</h2>
+                  </div>
+                  <button className="btn btn-secondary btn-sm" onClick={() => setSelectedEnt(null)}>✕</button>
+                </div>
+
+                <div style={{ background: 'rgba(15, 23, 42, 0.8)', padding: '1.25rem', borderRadius: '10px', border: '1px solid var(--border-active)', marginBottom: '1.5rem' }}>
+                  <div style={{ fontSize: '0.78rem', color: '#818cf8', textTransform: 'uppercase', fontWeight: 700, marginBottom: '0.5rem' }}>🌟 Master Golden Record Attributes</div>
+                  <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '0.75rem', fontSize: '0.85rem' }}>
+                    <div><span style={{ color: '#64748b' }}>ADDRESS: </span><strong>{selectedEnt.address || '—'}</strong></div>
+                    <div><span style={{ color: '#64748b' }}>LOCATION: </span><strong>{[selectedEnt.city, selectedEnt.state, selectedEnt.country].filter(Boolean).join(', ') || '—'}</strong></div>
+                    <div><span style={{ color: '#64748b' }}>PHONE: </span><strong>{selectedEnt.phone || '—'}</strong></div>
+                    <div><span style={{ color: '#64748b' }}>EMAIL: </span><strong>{selectedEnt.email || '—'}</strong></div>
+                    <div><span style={{ color: '#64748b' }}>WEBSITE: </span><strong>{selectedEnt.website || '—'}</strong></div>
+                  </div>
+                </div>
+
+                <h3 style={{ fontSize: '1rem', fontWeight: 700, color: '#fff', marginBottom: '0.75rem' }}>Linked Source Records Hierarchy</h3>
+                <div className="entity-tree-node">
+                  <div style={{ fontWeight: 800, color: '#fff' }}>🏢 Master Entity: {selectedEnt.canonical_name}</div>
+                </div>
+                {selectedEnt.records && selectedEnt.records.map((r, i) => (
+                  <div key={i} className="entity-tree-node entity-tree-child">
+                    <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '0.3rem' }}>
+                      <span className="badge badge-source">{r.source || `Source ${i+1}`} ({r.source_record_id})</span>
+                      <span style={{ fontSize: '0.75rem', color: '#94a3b8' }}>Linked #{i+1}</span>
+                    </div>
+                    <div style={{ fontWeight: 600, color: '#fff' }}>{r.business_name}</div>
+                    <div style={{ fontSize: '0.78rem', color: '#94a3b8', marginTop: '0.2rem' }}>
+                      {r.address && `📍 ${r.address} `}{r.phone && `📞 ${r.phone} `}{r.email && `✉️ ${r.email}`}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+        </div>
+      );
+    }
+
+    function LiveComparator() {
+      const presets = [
+        {
+          title: 'Legal Suffix & Abbreviation Variation',
+          rec1: { business_name: 'Apex Technology Solutions Pvt. Ltd.', address: '100 Market St, Ste 500', city: 'San Francisco', state: 'CA', country: 'USA', phone: '+1 (415) 123-4567', email: 'contact@apextech.com', website: 'https://www.apextech.com' },
+          rec2: { business_name: 'apex technology solutions private limited', address: '100 Market Street #500', city: 'San Francisco', state: 'California', country: 'USA', phone: '4151234567', email: 'info@apextech.com', website: 'http://apextech.com' }
+        },
+        {
+          title: 'Typo & Street Abbreviation',
+          rec1: { business_name: 'Beacon Financial Advisory Inc.', address: '238 Tech Parkway, Suite 792', city: 'New York', state: 'NY', country: 'USA', phone: '+1 212 958 9935', email: 'contact@beaconfa.com', website: 'https://www.beaconfa.com' },
+          rec2: { business_name: 'Becon Financial Advisory', address: '238 Tech Pkwy Ste 792', city: 'New York', state: 'NY', country: 'USA', phone: '(212) 958-9935', email: 'advisory@beaconfa.com', website: 'www.beaconfa.com' }
+        },
+        {
+          title: 'Distinct Companies in Same City',
+          rec1: { business_name: 'Cascade Global Logistics', address: '99 Brigade Rd', city: 'Seattle', state: 'WA', country: 'USA', phone: '+1 206 295 4582', email: 'support@cascadelogistics.com', website: 'https://www.cascadelogistics.com' },
+          rec2: { business_name: 'Evergreen Renewable Energy', address: '450 Pine Street', city: 'Seattle', state: 'WA', country: 'USA', phone: '+1 206 883 1290', email: 'info@evergreenenergy.org', website: 'https://www.evergreenenergy.org' }
+        }
+      ];
+
+      const [r1, setR1] = useState(presets[0].rec1);
+      const [r2, setR2] = useState(presets[0].rec2);
+      const [thresh, setThresh] = useState(60.0);
+      const [res, setRes] = useState(null);
+      const [loading, setLoading] = useState(false);
+      const [error, setError] = useState('');
+
+      const handleCompare = async (e) => {
+        if (e) e.preventDefault();
+        setLoading(true);
+        setError('');
+        try {
+          const data = await api.compareRecords(r1, r2, thresh);
+          setRes(data);
+        } catch (err) {
+          setError(err.message || 'Comparison failed');
+        } finally {
+          setLoading(false);
+        }
+      };
+
+      const getScoreColor = (s) => s >= 90 ? '#10B981' : s >= 75 ? '#06B6D4' : s >= 60 ? '#F59E0B' : '#EF4444';
+
+      return (
+        <div>
+          <div className="page-header">
+            <div>
+              <h1 className="page-title">Live Entity Resolution Sandbox</h1>
+              <p className="page-subtitle">Test and visualize the real-time record linkage pipeline on arbitrary custom business profiles.</p>
+            </div>
+          </div>
+
+          <div className="card" style={{ padding: '1rem', marginBottom: '1.25rem' }}>
+            <div style={{ fontSize: '0.8rem', fontWeight: 700, color: '#818cf8', textTransform: 'uppercase', marginBottom: '0.5rem' }}>💡 Quick Test Presets:</div>
+            <div style={{ display: 'flex', gap: '0.5rem', flexWrap: 'wrap' }}>
+              {presets.map((p, i) => (
+                <button key={i} className="btn btn-secondary btn-sm" onClick={() => { setR1(p.rec1); setR2(p.rec2); setRes(null); }}>
+                  Preset {i+1}: {p.title}
+                </button>
+              ))}
+            </div>
+          </div>
+
+          {error && <div style={{ background: 'rgba(239, 68, 68, 0.15)', color: '#fca5a5', padding: '0.8rem', borderRadius: '8px', marginBottom: '1rem' }}>⚠️ {error}</div>}
+
+          <form onSubmit={handleCompare}>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '1.25rem', marginBottom: '1.25rem' }}>
+              <div className="card" style={{ borderLeft: '4px solid #6366F1' }}>
+                <div className="card-header"><span className="card-title">🏢 Record A (Source 1)</span></div>
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '0.6rem' }}>
+                  <input type="text" className="input-control" placeholder="Business Name *" value={r1.business_name} onChange={e => setR1({ ...r1, business_name: e.target.value })} required />
+                  <input type="text" className="input-control" placeholder="Address" value={r1.address} onChange={e => setR1({ ...r1, address: e.target.value })} />
+                  <div style={{ display: 'grid', gridTemplateColumns: '2fr 1fr 1fr', gap: '0.4rem' }}>
+                    <input type="text" className="input-control" placeholder="City" value={r1.city} onChange={e => setR1({ ...r1, city: e.target.value })} />
+                    <input type="text" className="input-control" placeholder="State" value={r1.state} onChange={e => setR1({ ...r1, state: e.target.value })} />
+                    <input type="text" className="input-control" placeholder="Country" value={r1.country} onChange={e => setR1({ ...r1, country: e.target.value })} />
+                  </div>
+                  <input type="text" className="input-control" placeholder="Phone" value={r1.phone} onChange={e => setR1({ ...r1, phone: e.target.value })} />
+                  <input type="email" className="input-control" placeholder="Email" value={r1.email} onChange={e => setR1({ ...r1, email: e.target.value })} />
+                  <input type="text" className="input-control" placeholder="Website" value={r1.website} onChange={e => setR1({ ...r1, website: e.target.value })} />
+                </div>
+              </div>
+
+              <div className="card" style={{ borderLeft: '4px solid #06B6D4' }}>
+                <div className="card-header"><span className="card-title">🏢 Record B (Source 2)</span></div>
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '0.6rem' }}>
+                  <input type="text" className="input-control" placeholder="Business Name *" value={r2.business_name} onChange={e => setR2({ ...r2, business_name: e.target.value })} required />
+                  <input type="text" className="input-control" placeholder="Address" value={r2.address} onChange={e => setR2({ ...r2, address: e.target.value })} />
+                  <div style={{ display: 'grid', gridTemplateColumns: '2fr 1fr 1fr', gap: '0.4rem' }}>
+                    <input type="text" className="input-control" placeholder="City" value={r2.city} onChange={e => setR2({ ...r2, city: e.target.value })} />
+                    <input type="text" className="input-control" placeholder="State" value={r2.state} onChange={e => setR2({ ...r2, state: e.target.value })} />
+                    <input type="text" className="input-control" placeholder="Country" value={r2.country} onChange={e => setR2({ ...r2, country: e.target.value })} />
+                  </div>
+                  <input type="text" className="input-control" placeholder="Phone" value={r2.phone} onChange={e => setR2({ ...r2, phone: e.target.value })} />
+                  <input type="email" className="input-control" placeholder="Email" value={r2.email} onChange={e => setR2({ ...r2, email: e.target.value })} />
+                  <input type="text" className="input-control" placeholder="Website" value={r2.website} onChange={e => setR2({ ...r2, website: e.target.value })} />
+                </div>
+              </div>
+            </div>
+
+            <div className="card" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '1rem', padding: '1rem 1.5rem', marginBottom: '1.5rem' }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', flex: '1 1 280px' }}>
+                <span style={{ fontSize: '0.85rem', color: '#cbd5e1' }}>Threshold: <strong>{thresh}%</strong></span>
+                <input type="range" min="30" max="90" step="5" value={thresh} onChange={e => setThresh(parseFloat(e.target.value))} style={{ width: '100%', accentColor: '#6366f1' }} />
+              </div>
+              <button type="submit" className="btn btn-primary" disabled={loading}>
+                {loading ? '⚙️ Comparing...' : '🚀 Compare & Resolve Records'}
+              </button>
+            </div>
+          </form>
+
+          {res && res.result && (
+            <div className="card" style={{ background: 'rgba(15, 23, 42, 0.95)', border: '1px solid var(--border-active)' }}>
+              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1.25rem', borderBottom: '1px solid var(--border-subtle)', paddingBottom: '1rem' }}>
+                <div>
+                  <div style={{ fontSize: '0.78rem', color: '#818cf8', fontWeight: 700, textTransform: 'uppercase' }}>Resolution Verdict</div>
+                  <div style={{ fontSize: '2.2rem', fontWeight: 800, color: getScoreColor(res.result.confidence_score) }}>{res.result.confidence_score.toFixed(1)}%</div>
+                </div>
+                <div style={{ textAlign: 'right' }}>
+                  <span className={`badge ${res.result.status === 'Match' ? 'badge-match' : res.result.status === 'Potential Match' ? 'badge-potential' : 'badge-review'}`} style={{ fontSize: '1rem', padding: '6px 14px' }}>
+                    {res.result.status}
+                  </span>
+                  <div style={{ fontSize: '0.8rem', color: '#94a3b8', marginTop: '0.3rem' }}>Tier: {res.result.tier}</div>
+                </div>
+              </div>
+
+              <h3 style={{ fontSize: '0.95rem', fontWeight: 700, color: '#e2e8f0', marginBottom: '0.6rem' }}>Attribute Similarity Scores:</h3>
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '0.75rem', marginBottom: '1.25rem' }}>
+                {res.result.similarity_breakdown && [
+                  { label: 'Name Similarity', val: res.result.similarity_breakdown.business_name_similarity },
+                  { label: 'Address Similarity', val: res.result.similarity_breakdown.address_similarity },
+                  { label: 'Phone Similarity', val: res.result.similarity_breakdown.phone_similarity },
+                  { label: 'Email Similarity', val: res.result.similarity_breakdown.email_similarity },
+                  { label: 'Website Similarity', val: res.result.similarity_breakdown.website_similarity },
+                  { label: 'City Match', val: res.result.similarity_breakdown.city_similarity }
+                ].map((it, i) => (
+                  <div key={i} style={{ background: 'rgba(255, 255, 255, 0.03)', padding: '0.7rem', borderRadius: '6px' }}>
+                    <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '0.8rem', marginBottom: '0.25rem' }}>
+                      <span>{it.label}</span>
+                      <span style={{ fontWeight: 700, color: getScoreColor(it.val) }}>{it.val}%</span>
+                    </div>
+                    <div className="confidence-bar-bg">
+                      <div className="confidence-bar-fill" style={{ width: `${it.val}%`, backgroundColor: getScoreColor(it.val) }} />
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              <h3 style={{ fontSize: '0.95rem', fontWeight: 700, color: '#e2e8f0', marginBottom: '0.4rem' }}>Reasoning Evidence:</h3>
+              <ul style={{ paddingLeft: '1.25rem', color: '#cbd5e1', fontSize: '0.85rem', lineHeight: '1.6' }}>
+                {res.result.evidence_summary && res.result.evidence_summary.map((ev, i) => <li key={i}>{ev}</li>)}
+              </ul>
+            </div>
+          )}
+        </div>
+      );
+    }
+
+    function Statistics({ stats }) {
+      if (!stats) return <div className="card" style={{ padding: '3rem', textAlign: 'center', color: '#94a3b8' }}>Loading analytics...</div>;
+      return (
+        <div>
+          <div className="page-header">
+            <div>
+              <h1 className="page-title">Analytics & Statistics</h1>
+              <p className="page-subtitle">Quantitative analysis of entity deduplication rate, confidence tier distribution, and multi-source coverage.</p>
+            </div>
+          </div>
+          <div className="stats-grid">
+            <div className="stat-card" style={{ '--card-accent': '#6366F1' }}><div className="stat-label">Total Ingested Records</div><div className="stat-value">{stats.total_records}</div></div>
+            <div className="stat-card" style={{ '--card-accent': '#10B981' }}><div className="stat-label">Resolved Master Entities</div><div className="stat-value">{stats.unique_entities}</div></div>
+            <div className="stat-card" style={{ '--card-accent': '#8B5CF6' }}><div className="stat-label">Duplicates Consolidated</div><div className="stat-value">{stats.duplicate_records}</div></div>
+            <div className="stat-card" style={{ '--card-accent': '#06B6D4' }}><div className="stat-label">High Confidence Matches</div><div className="stat-value">{stats.high_confidence_matches}</div></div>
+          </div>
+        </div>
+      );
+    }
+
+    function EvaluationView() {
+      const [split, setSplit] = useState('test');
+      const [thresh, setThresh] = useState(60.0);
+      const [evalData, setEvalData] = useState(null);
+      const [loading, setLoading] = useState(true);
+
+      useEffect(() => {
+        setLoading(true);
+        api.getEvaluation({ dataset: split, threshold: thresh })
+          .then(setEvalData)
+          .catch(console.error)
+          .finally(() => setLoading(false));
+      }, [split, thresh]);
+
+      if (loading || !evalData) return <div className="card" style={{ padding: '3rem', textAlign: 'center', color: '#94a3b8' }}>Computing evaluation metrics...</div>;
+
+      return (
+        <div>
+          <div className="page-header">
+            <div>
+              <h1 className="page-title">Machine Learning Model Evaluation</h1>
+              <p className="page-subtitle">Validation metrics against ground-truth pairs (RandomForestClassifier, 15 features, 5-fold CV).</p>
+            </div>
+            <div style={{ display: 'flex', gap: '0.4rem' }}>
+              <button className={`btn btn-sm ${split === 'test' ? 'btn-primary' : 'btn-secondary'}`} onClick={() => setSplit('test')}>Test Set (Unseen)</button>
+              <button className={`btn btn-sm ${split === 'train' ? 'btn-primary' : 'btn-secondary'}`} onClick={() => setSplit('train')}>Train Set</button>
+            </div>
+          </div>
+
+          <div className="stats-grid">
+            <div className="stat-card" style={{ '--card-accent': '#10B981' }}><div className="stat-label">Model Accuracy</div><div className="stat-value">{evalData.metrics.accuracy}%</div></div>
+            <div className="stat-card" style={{ '--card-accent': '#06B6D4' }}><div className="stat-label">Precision</div><div className="stat-value">{evalData.metrics.precision}%</div></div>
+            <div className="stat-card" style={{ '--card-accent': '#6366F1' }}><div className="stat-label">Recall (Sensitivity)</div><div className="stat-value">{evalData.metrics.recall}%</div></div>
+            <div className="stat-card" style={{ '--card-accent': '#8B5CF6' }}><div className="stat-label">F1-Score</div><div className="stat-value">{evalData.metrics.f1_score}%</div></div>
+          </div>
+
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(400px, 1fr))', gap: '1.5rem' }}>
+            <div className="card">
+              <h2 className="card-title" style={{ marginBottom: '1rem' }}>🎯 Confusion Matrix</h2>
+              <div style={{ background: 'rgba(15, 23, 42, 0.7)', padding: '1.25rem', borderRadius: '10px' }}>
+                <div className="cm-grid">
+                  <div></div><div style={{ fontSize: '0.75rem', color: '#94a3b8' }}>PRED NON-MATCH</div><div style={{ fontSize: '0.75rem', color: '#94a3b8' }}>PRED MATCH</div>
+                  <div style={{ fontSize: '0.75rem', color: '#94a3b8', textAlign: 'left' }}>ACTUAL NON-MATCH</div>
+                  <div className="cm-cell cm-tn"><span style={{ fontSize: '1.3rem' }}>{evalData.metrics.true_negatives}</span><span>TN</span></div>
+                  <div className="cm-cell cm-fp"><span style={{ fontSize: '1.3rem' }}>{evalData.metrics.false_positives}</span><span>FP</span></div>
+                  <div style={{ fontSize: '0.75rem', color: '#94a3b8', textAlign: 'left' }}>ACTUAL MATCH</div>
+                  <div className="cm-cell cm-fn"><span style={{ fontSize: '1.3rem' }}>{evalData.metrics.false_negatives}</span><span>FN</span></div>
+                  <div className="cm-cell cm-tp"><span style={{ fontSize: '1.3rem' }}>{evalData.metrics.true_positives}</span><span>TP</span></div>
+                </div>
+              </div>
+            </div>
+
+            <div className="card">
+              <h2 className="card-title" style={{ marginBottom: '1rem' }}>Precision-Recall Tradeoff</h2>
+              <div className="table-container">
+                <table className="data-table">
+                  <thead><tr><th>Threshold</th><th>Precision</th><th>Recall</th><th>F1-Score</th></tr></thead>
+                  <tbody>
+                    {evalData.threshold_analysis && evalData.threshold_analysis.map(r => (
+                      <tr key={r.threshold} style={{ background: r.threshold === thresh ? 'rgba(99, 102, 241, 0.15)' : 'transparent' }}>
+                        <td className="mono">≥ {r.threshold}%</td>
+                        <td style={{ color: '#38bdf8' }}>{r.precision}%</td>
+                        <td style={{ color: '#34d399' }}>{r.recall}%</td>
+                        <td style={{ color: '#a78bfa', fontWeight: 700 }}>{r.f1_score}%</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      );
+    }
+
+    // Main App
+    function App() {
+      const [activeTab, setActiveTab] = useState('dashboard');
+      const [health, setHealth] = useState(null);
+      const [stats, setStats] = useState(null);
+      const [isMatching, setIsMatching] = useState(false);
+
+      const refresh = async () => {
+        try {
+          const [h, s] = await Promise.all([
+            api.getHealth().catch(() => ({ status: 'healthy', model_loaded: true })),
+            api.getStatistics().catch(() => null)
+          ]);
+          setHealth(h);
+          setStats(s);
+        } catch (e) { console.error(e); }
+      };
+
+      useEffect(() => { refresh(); }, []);
+
+      const handleRerun = async () => {
+        setIsMatching(true);
+        try {
+          await api.triggerMatch({ threshold: 60.0 });
+          await refresh();
+        } finally {
+          setIsMatching(false);
+        }
+      };
+
+      return (
+        <div className="app-layout">
+          <Navbar activeTab={activeTab} setActiveTab={setActiveTab} health={health} onRerunMatch={handleRerun} isMatching={isMatching} />
+          <main className="main-content">
+            {activeTab === 'dashboard' && <Dashboard stats={stats} onNavigate={setActiveTab} />}
+            {activeTab === 'upload' && <FileUpload onResolutionComplete={refresh} />}
+            {activeTab === 'matches' && <MatchTable />}
+            {activeTab === 'entities' && <EntityDetails />}
+            {activeTab === 'compare' && <LiveComparator />}
+            {activeTab === 'statistics' && <Statistics stats={stats} />}
+            {activeTab === 'evaluation' && <EvaluationView />}
+          </main>
+        </div>
+      );
+    }
+
+    ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+  </script>
+</body>
+</html>

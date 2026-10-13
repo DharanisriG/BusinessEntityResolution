@@ -1,0 +1,55 @@
+{
+  "model_type": "RandomForestClassifier",
+  "trained_at": "2026-09-30 14:38:58",
+  "training_samples": 1046,
+  "positive_pairs": 299,
+  "negative_pairs": 747,
+  "metrics": {
+    "accuracy": 1.0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1_score": 1.0,
+    "cv_f1_mean": 1.0,
+    "cv_accuracy_mean": 1.0,
+    "confusion_matrix": {
+      "true_negatives": 747,
+      "false_positives": 0,
+      "false_negatives": 0,
+      "true_positives": 299
+    }
+  },
+  "feature_importances": {
+    "name_levenshtein_ratio": 0.2394,
+    "name_token_set_ratio": 0.175,
+    "name_token_sort_ratio": 0.1317,
+    "city_similarity": 0.1101,
+    "state_match": 0.0925,
+    "exact_website_match": 0.0599,
+    "website_similarity": 0.0523,
+    "address_similarity": 0.0497,
+    "phone_similarity": 0.0472,
+    "exact_phone_match": 0.024,
+    "email_similarity": 0.0137,
+    "country_match": 0.0042,
+    "exact_name_match": 0.0001,
+    "exact_city_name_match": 0.0001,
+    "exact_email_match": 0.0
+  },
+  "feature_columns": [
+    "name_token_sort_ratio",
+    "name_token_set_ratio",
+    "name_levenshtein_ratio",
+    "address_similarity",
+    "city_similarity",
+    "state_match",
+    "country_match",
+    "phone_similarity",
+    "email_similarity",
+    "website_similarity",
+    "exact_name_match",
+    "exact_phone_match",
+    "exact_email_match",
+    "exact_website_match",
+    "exact_city_name_match"
+  ]
+}

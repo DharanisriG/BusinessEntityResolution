@@ -1,0 +1,104 @@
+source_record_id	business_name	address	city	state	country	phone	email	website
+S2_0001	Apex Technology Solutions	664 broadway	San Francisco	CA	USA	415-481-5012	INFO@APEXTECH.COM	http://apextech.com/
+S2_0002	B. e. a. c. o. n. Financial Advisory	238 tech parkway, ste. 792	New York	NY	USA	212-958-9935	INFO@BEACONFA.COM	http://beaconfa.com/
+S2_0003	Cascade Global Logistics	99 brigade rd., ste. 130	Seattle	WA	USA		INFO@CASCADELOGISTICS.COM	http://cascadelogistics.com/
+S2_0004	Delta Health Pharmaceuticals	248 mg rd., ste. 674	boston	MA	USA	617-403-9928	INFO@DELTAHEALTH.COM	http://deltahealth.com/
+S2_0005	Evergreen Renewable Energy & Co.	439 innovation blvd., ste. 384	denver	CO	USA	303-206-3615	INFO@EVERGREENENERGY.ORG	http://evergreenenergy.org/
+S2_0006	Frontier Robotics & Automation		austin	TX	USA	512-359-4527	INFO@FRONTIERROBOTICS.IO	http://frontierrobotics.io/
+S2_0007	Golden Gate Retail Enterprises	990 victoria rd.	San Francisco	CA	USA	415-294-7224	INFO@GOLDENGATERETAIL.COM	http://goldengateretail.com/
+S2_0008	Horizon Aerospace Engineering		los angeles	CA	USA	310-470-1711	INFO@HORIZONAERO.COM	http://horizonaero.com/
+S2_0009	I. n. f. i. n. i. t. y. Cloud Networks	757 fifth ave, ste. 487	chicago	IL	USA	312-280-5803	INFO@INFINITYCLOUD.NET	http://infinitycloud.net/
+S2_0010	Jupiter BioSciences Lab		san diego	CA	USA			http://jupiterbiosci.com/
+S2_0011	Keystone Construction Group	731 broadway	philadelphia	PA	USA	215-433-5741	INFO@KEYSTONEBUILD.COM	http://keystonebuild.com/
+S2_0012	Lumina Creative Media		atlanta	GA	USA	404-303-7227	INFO@LUMINAMEDIA.AGENCY	http://luminamedia.agency/
+S2_0013	Matrix Cyber Defense	294 fifth ave, ste. 473	Washington	DC	USA		INFO@MATRIXCYBERSEC.COM	http://matrixcybersec.com/
+S2_0014	nexus semiconductor works pvt ltd		san jose	CA	USA	408-899-2169	INFO@NEXUSSEMI.COM	http://nexussemi.com/
+S2_0015	O. r. i. o. n. Asset Management	633 silicon expressway	charlotte	NC	USA	704-946-5010		
+S2_0016	Pinnacle Food Brands	177 fifth ave	Portland	OR	USA	503-855-4598	INFO@PINNACLEFOOD.COM	http://pinnaclefood.com/
+S2_0017	Quantum Materials Research	711 main st., ste. 894	raleigh	NC	USA	919-257-4752	INFO@QUANTUMMAT.ORG	http://quantummat.org/
+S2_0018	radiant solar systems pvt ltd	851 market st., ste. 510	phoenix	AZ	USA		INFO@RADIANTSOLAR.COM	http://radiantsolar.com/
+S2_0019	Silverline Maritime Transport & Co.	226 financial center way, ste. 835	miami	FL	USA	305-522-4483	INFO@SILVERLINESHIPPING.COM	http://silverlineshipping.com/
+S2_0020	Trident Automotive Components	681 fifth ave	detroit	MI	USA	313-858-8517	INFO@TRIDENTAUTO.COM	http://tridentauto.com/
+S2_0021	UltraTech Software Innovations	156 industrial ave	bengaluru	Karnataka	India	910805408072		http://ultratechsoft.in/
+S2_0022	Bharat Heavy Electrical Systems	774 brigade rd., ste. 697	new delhi	Delhi	India		INFO@BHARATELECTRICALS.CO.IN	http://bharatelectricals.co.in/
+S2_0023	Tata Precision Engineering	151 mg rd., ste. 873	pune	Maharashtra	India	910203564251	INFO@TATAPRECISION.COM	http://tataprecision.com/
+S2_0024	Infospectrum Digital Labs		hyderabad	Telangana	India	910407455324	INFO@INFOSPECTRUM.CO	http://infospectrum.co/
+S2_0025	mahindra agri logistics pvt ltd	400 brigade rd., ste. 641	mumbai	Maharashtra	India	910222921859	INFO@MAHINDRA-AGRI.IN	
+S2_0026	C. h. e. n. n. a. i. Petrochemical Refining	708 financial center way, ste. 373	Chennai	Tamil Nadu	India		INFO@CHENNAIPETROCHEM.COM	http://chennaipetrochem.com/
+S2_0027	V. a. n. g. u. a. r. d. Security Solutions	310 mission st.	London	England	UK	440209398441	INFO@VANGUARDSECURITY.CO.UK	http://vanguardsecurity.co.uk/
+S2_0028	Crown FinTech Global		london	England	UK		INFO@CROWNFINTECH.COM	http://crownfintech.com/
+S2_0029	Bavaria Precision Motors & Co.	633 innovation blvd.	munich	Bavaria	Germany	440899897858	INFO@BAVARIAMOTORS.DE	http://bavariamotors.de/
+S2_0030	Nordic Clean Energy Labs		stockholm	Stockholm	Sweden	408-708-9806	INFO@NORDICCLEANENERGY.SE	
+S2_0031	GreenLeaf Agri Corporation & Co.	256 financial center way, ste. 180	new york	NY	USA	212-287-8962	INFO@GREENLEAFAGRI.COM	http://greenleafagri.com/
+S2_0032	optima bio innovations pvt ltd		berlin	Berlin	Germany	910308973915	INFO@OPTIMABIO.COM	http://optimabio.com/
+S2_0033	C. o. r. e. Nano Holdings	903 brigade rd.	manchester	England	UK	9101614553384	INFO@CORENANO.COM	http://corenano.com/
+S2_0034	IronClad Network Innovations	740 industrial ave	los angeles	CA	USA	310-887-7118	INFO@IRONCLADNETWORK.COM	
+S2_0035	Terra Analytics Ventures	263 innovation blvd.	seattle	WA	USA	206-221-4770	INFO@TERRAANALYTICS.COM	http://terraanalytics.com/
+S2_0036	Z. e. n. i. t. h. Aero Technologies	734 silicon expressway	austin	TX	USA		INFO@ZENITHAERO.COM	http://zenithaero.com/
+S2_0037	BluePeak Supply Solutions	253 industrial ave, ste. 319	Manchester	England	UK	9101613219824	INFO@BLUEPEAKSUPPLY.COM	http://bluepeaksupply.com/
+S2_0038	Synapse Pharma Industries	258 victoria rd.	london	England	UK	910207829332		http://synapsepharma.com/
+S2_0039	R. o. y. a. l. Eco Solutions	372 mission st.	chennai	Tamil Nadu	India	910441908841	INFO@ROYALECO.COM	http://royaleco.com/
+S2_0040	Eagle Energy Group	72 mission st., ste. 211	Seattle	WA	USA	206-454-4139	INFO@EAGLEENERGY.COM	
+S2_0041	royal network ventures pvt ltd	442 tech parkway	boston	MA	USA	617-455-2235	INFO@ROYALNETWORK.COM	http://royalnetwork.com/
+S2_0042	Terra Network Solutions & Co.	677 mg rd., ste. 195	New York	NY	USA		INFO@TERRANETWORK.COM	http://terranetwork.com/
+S2_0043	First Capital Ventures	228 cyber city	london	England	UK	910201983738		http://firstcapital.com/
+S2_0044	First Fin Technologies	281 financial center way, ste. 565	hyderabad	Telangana	India	910405785687	INFO@FIRSTFIN.COM	http://firstfin.com/
+S2_0045	Omega Security Services	687 high st.	berlin	Berlin	Germany	910304185957	INFO@OMEGASECURITY.COM	http://omegasecurity.com/
+S2_0046	Metro Smart Technologies Ltd	763 mg rd.	toronto	ON	Canada	914166261415	INFO@METROSMART.COM	http://metrosmart.com/
+S2_0047	National Digital Industries	524 financial center way, ste. 261	london	England	UK	910201954280	INFO@NATIONALDIGITAL.COM	http://nationaldigital.com/
+S2_0048	Starlight Bio Dynamics	80 brigade rd.	Chicago	IL	USA	312-440-7615	INFO@STARLIGHTBIO.COM	http://starlightbio.com/
+S2_0049	prime pharma corporation pvt ltd	618 market st., ste. 529	Toronto	ON	Canada	914169770838	INFO@PRIMEPHARMA.COM	http://primepharma.com/
+S2_0050	Direct Chem Corporation		bengaluru	Karnataka	India	910806033115	INFO@DIRECTCHEM.COM	http://directchem.com/
+S2_0051	T. e. r. r. a. Supply Partners	19 fifth ave, ste. 676	austin	TX	USA	512-302-2200	INFO@TERRASUPPLY.COM	http://terrasupply.com/
+S2_0052	Core Smart Laboratories & Co.	145 financial center way	dallas	TX	USA	214-270-5002	INFO@CORESMART.COM	http://coresmart.com/
+S2_0053	Allied Argi Enterprises	863 mg rd., ste. 726	pune	Maharashtra	India	910209874152	INFO@ALLIEDAGRI.COM	http://alliedagri.com/
+S2_0054	Global Infra Dynamics	316 financial center way, ste. 237	berlin	Berlin	Germany	910305437001	INFO@GLOBALINFRA.COM	http://globalinfra.com/
+S2_0055	Prime Eco Services	169 industrial ave	berlin	Berlin	Germany	910304533779	INFO@PRIMEECO.COM	http://primeeco.com/
+S2_0056	Acro Supply Corporation	527 fifth ave	dallas	TX	USA	214-252-2512		http://acrosupply.com/
+S2_0057	F. a. l. c. o. n. Capital Dynamics	55 market st.	dallas	TX	USA	214-333-5291		http://falconcapital.com/
+S2_0058	First Wireless Ventures	732 mission st., ste. 214	berlin	Berlin	Germany	910302262382	INFO@FIRSTWIRELESS.COM	http://firstwireless.com/
+S2_0059	greenleaf security partners pvt ltd	568 market st., ste. 696	Boston	MA	USA	617-765-3426	INFO@GREENLEAFSECURITY.COM	http://greenleafsecurity.com/
+S2_0060	Omega Micro Technologies	383 financial center way, ste. 140	atlanta	GA	USA	404-566-4441	INFO@OMEGAMICRO.COM	http://omegamicro.com/
+S2_0061	Eagle Aero Group & Co.	372 victoria rd., ste. 516	seattle	WA	USA	206-835-3532	INFO@EAGLEAERO.COM	
+S2_0062	IronClad Aero Dynamics		Chicago	IL	USA	312-622-1406	INFO@IRONCLADAERO.COM	http://ironcladaero.com/
+S2_0063	First Wirreless Partners	811 financial center way	Bengaluru	Karnataka	India	910805163555	INFO@FIRSTWIRELESS.COM	http://firstwireless.com/
+S2_0064	Atlantic Nano Innovations	401 cyber city	seattle	WA	USA	206-681-4644	INFO@ATLANTICNANO.COM	http://atlanticnano.com/
+S2_0065	Royal Media Systems	850 victoria rd., ste. 328	atlanta	GA	USA	404-224-4164	INFO@ROYALMEDIA.COM	
+S2_0066	alpha supply holdings pvt ltd	801 industrial ave	austin	TX	USA	512-721-7548	INFO@ALPHASUPPLY.COM	http://alphasupply.com/
+S2_0067	Eagle Network Systems	128 financial center way, ste. 282	san francisco	CA	USA	415-794-5349	INFO@EAGLENETWORK.COM	http://eaglenetwork.com/
+S2_0068	national eco industries pvt ltd	363 high st., ste. 546	Chennai	Tamil Nadu	India	910449580255	INFO@NATIONALECO.COM	http://nationaleco.com/
+S2_0069	Prime Fin Partners	204 industrial ave	toronto	ON	Canada	914168315831	INFO@PRIMEFIN.COM	http://primefin.com/
+S2_0070	global analytics partners pvt ltd	713 high st., ste. 854	berlin	Berlin	Germany		INFO@GLOBALANALYTICS.COM	http://globalanalytics.com/
+S2_0071	A. l. l. i. e. d. Capital Solutions	648 main st., ste. 227	bengaluru	Karnataka	India	910806038571	INFO@ALLIEDCAPITAL.COM	
+S2_0072	S. t. a. r. l. i. g. h. t. Agri Group	344 mission st., ste. 667	chennai	Tamil Nadu	India	910443135534		http://starlightagri.com/
+S2_0073	Royal Capital Group	703 high st., ste. 730	Hyderabad	Telangana	India	910406049101	INFO@ROYALCAPITAL.COM	http://royalcapital.com/
+S2_0074	Alpha Network Dynamics & Co.	321 industrial ave	san francisco	CA	USA	415-793-6279	INFO@ALPHANETWORK.COM	http://alphanetwork.com/
+S2_0075	Terra Media Ventures	533 fifth ave, ste. 853	los angeles	CA	USA	310-373-2389		http://terramedia.com/
+S2_0076	Metro Analtyics Group	353 broadway, ste. 869	Sydney	NSW	Australia	102-494-0441	INFO@METROANALYTICS.COM	http://metroanalytics.com/
+S2_0077	eagle agri corporation pvt ltd	160 market st.	los angeles	CA	USA	310-686-2193	INFO@EAGLEAGRI.COM	
+S2_0078	T. e. r. r. a. Capital Partners	209 high st., ste. 606	toronto	ON	Canada	914167705062	INFO@TERRACAPITAL.COM	http://terracapital.com/
+S2_0079	P. a. c. i. f. i. c. Micro Group	924 victoria rd., ste. 209	san francisco	CA	USA			http://pacificmicro.com/
+S2_0080	Pacific Nano Innovatioons	485 market st., ste. 224	Manchester	England	UK	9101618658158	INFO@PACIFICNANO.COM	http://pacificnano.com/
+S2_0081	S. u. m. m. i. t. Media Group	582 brigade rd.	manchester	England	UK	9101618425149	INFO@SUMMITMEDIA.COM	http://summitmedia.com/
+S2_0082	V. o. r. t. e. x. Wireless Partners	446 cyber city, ste. 556	manchester	England	UK	9101613670226	INFO@VORTEXWIRELESS.COM	http://vortexwireless.com/
+S2_0083	Synapse Robotics Ventures	779 innovation blvd., ste. 383	dallas	TX	USA	214-984-9540	INFO@SYNAPSEROBOTICS.COM	http://synapserobotics.com/
+S2_0084	Nova Energy Corporation	460 broadway, ste. 340	dallas	TX	USA	214-478-6502	INFO@NOVAENERGY.COM	http://novaenergy.com/
+S2_0085	Direct Network Solutions & Co.	164 innovation blvd.	boston	MA	USA	617-356-4505	INFO@DIRECTNETWORK.COM	http://directnetwork.com/
+S2_0086	United Capital Consulting	565 fifth ave	bengaluru	Karnataka	India	910804470105	INFO@UNITEDCAPITAL.COM	http://unitedcapital.com/
+S2_0087	Optima Capital Consulting	978 high st.	toronto	ON	Canada	914167381734	INFO@OPTIMACAPITAL.COM	http://optimacapital.com/
+S2_0088	Nova Data Systems & Co.	781 mission st., ste. 529	atlanta	GA	USA	404-751-9947	INFO@NOVADATA.COM	http://novadata.com/
+S2_0089	spectra logistics partners pvt ltd		denver	CO	USA	303-697-1475		http://spectralogistics.com/
+S2_0090	Alpha Supply GGroup	751 tech parkway, ste. 230	hyderabad	Telangana	India	910409961107	INFO@ALPHASUPPLY.COM	http://alphasupply.com/
+S2_0091	Global Fin Industries & Co.	688 market st.	toronto	ON	Canada	914168190929	INFO@GLOBALFIN.COM	http://globalfin.com/
+S2_0092	summit media enterprises pvt ltd	276 mission st.	New York	NY	USA	212-665-6355	INFO@SUMMITMEDIA.COM	http://summitmedia.com/
+S2_0093	Direct Idustrial Partners	294 victoria rd., ste. 531	Hyderabad	Telangana	India	910405232413		http://directindustrial.com/
+S2_0096	Pacific Micro Ventures		seattle	WA	USA	206-462-7043	INFO@PACIFICMICRO.COM	
+S2_0098	Zenith Data Partnres		atlanta	GA	USA	404-606-4249	INFO@ZENITHDATA.COM	http://zenithdata.com/
+S2_0100	Spectra Pharma Innovations	365 mg rd.	new york	NY	USA	212-579-2129	INFO@SPECTRAPHARMA.COM	http://spectrapharma.com/
+S2_0102	Falcon Media Services	455 tech parkway, ste. 766	boston	MA	USA	617-476-9817	INFO@FALCONMEDIA.COM	http://falconmedia.com/
+S2_0104	Optima Bio Holdings & Co.	259 victoria rd.	pune	Maharashtra	India	910207358385		http://optimabio.com/
+S2_0105	Direct Data Ventures	196 fifth ave	Bengaluru	Karnataka	India	910805334434	INFO@DIRECTDATA.COM	http://directdata.com/
+S2_0107	Starlgiht Smart Solutions	747 mission st.	denver	CO	USA	303-976-4937		http://starlightsmart.com/
+S2_0108	A. c. r. o. Robotics Group	468 victoria rd.	london	England	UK	910205936453	INFO@ACROROBOTICS.COM	http://acrorobotics.com/
+S2_0109	Pacific Fin Services & Co.	323 silicon expressway, ste. 584	denver	CO	USA	303-766-9698	INFO@PACIFICFIN.COM	http://pacificfin.com/
+S2_0110	A. l. l. i. e. d. Capital Services	348 main st., ste. 377	berlin	Berlin	Germany	910306144280	INFO@ALLIEDCAPITAL.COM	http://alliedcapital.com/
