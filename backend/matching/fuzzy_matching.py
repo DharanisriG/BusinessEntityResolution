@@ -65,16 +65,24 @@ def compute_record_similarities(rec1: Dict[str, Any], rec2: Dict[str, Any]) -> D
     cntry2 = rec2.get("norm_country", "") or rec2.get("country", "")
     country_match = 1.0 if (cntry1 and cntry2 and cntry1 == cntry2) else (0.0 if (cntry1 and cntry2) else 0.5)
     
+    
     # Phone similarity (normalized digits)
     phone1 = rec1.get("norm_phone", "")
     phone2 = rec2.get("norm_phone", "")
+
     if phone1 and phone2:
         if phone1 == phone2:
             phone_similarity = 1.0
-        elif phone1[-7:] == phone2[-7:]:  # Suffix 7-digit match
-            phone_similarity = 0.9
+        elif (
+            len(phone1) >= 10
+            and len(phone2) >= 10
+            and phone1[-7:] == phone2[-7:]
+        ):
+            phone_similarity = 0.75
         else:
-            phone_similarity = calculate_string_similarity(phone1, phone2, method="ratio")
+            phone_similarity = calculate_string_similarity(
+                phone1, phone2, method="ratio"
+            )
     else:
         phone_similarity = 0.0
         

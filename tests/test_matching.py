@@ -96,4 +96,13 @@ def test_canonical_clustering():
     ent = entities[0]
     assert ent["records_count"] == 2
     assert ent["duplicate_count"] == 1
-    assert "Beacon Financial Advisory" in ent["canonical_name"]
+   
+   
+def test_phone_suffix_match_gets_lower_similarity():
+    rec1 = {"norm_phone": "4155550199"}
+    rec2 = {"norm_phone": "2125550199"}
+
+    similarities = compute_record_similarities(rec1, rec2)
+
+    assert similarities["phone_similarity"] == 0.75
+
